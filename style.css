@@ -1,0 +1,77 @@
+html, body {
+        margin: 0;
+        position: 0;
+}
+
+input[type="text"] {
+        border-radius: 20px;
+        border: 1px solid darkgray;
+}
+
+input[type="text"]:focus {
+        outline: none;
+        border: 3px solid lightgreen;
+
+}
+
+/* Header */
+
+header {
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+        position: fixed;
+        background-color: #ddd;
+        width: 80%;
+        height: 10%;
+        border-bottom: 3px solid #aaa;
+}
+
+#searchbar {
+        position: absolute;
+        display: flex;
+        top: 20%;
+        width: 30%;
+}
+
+#searchbar>input {
+        height: 4em;
+        width: 100%;
+}
+
+#searchbar>#searchicon {
+        border-radius: 20px;
+        border: 1px solid darkgray;
+        position: absolute;
+        top: 0.5em;
+        left: 90%;
+        padding: 0.1em;
+}
+
+#logo {
+        position: absolute;
+        left:1%;
+}
+
+/* Aside */
+
+aside {
+        z-index: 2;
+        position: fixed;
+        height: 100%;
+        width: 20%;
+        right: 0;
+        background-color: #ddd;
+        border-left: 3px solid #aaa;
+}
+
+/* Content */
+
+#window {
+        z-index: 1;
+        position: fixed;
+        top: 10%;
+        overflow-y: scroll;
+        height: 100%;
+        width: 80%;
+}
