@@ -49,7 +49,7 @@ aside {
         z-index: 1;
         position: fixed;
         height: 100%;
-        width: 13rem;
+        width: 25vw;
         right: 0;
         top: 5rem;
         border-left-style: solid;
@@ -65,4 +65,78 @@ section {
         height: 100%;
         right: 13rem;
         width: 100%;
+}
+/*Parte centrale dell'utente*/
+#user {
+        z-index: 1;
+        position:fixed;
+        display: flex;
+        gap: 1rem;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        top: 5rem;
+        width: 100%;
+        height: 13%;
+        border-bottom: 1px solid black;
+        align-items: center;
+}
+
+
+#user>#userIcon {
+    width: 70;
+    height: 70;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+#user>#userIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+#user>#fastmsg{
+        flex:1;
+        max-width: 600px;
+        height: 60;
+        margin-left: 15rem;
+        margin-right: 0.01rem;
+        border-radius: 15px;
+        padding: 0 1rem;
+        text-align: center;
+}
+
+
+
+#user>#sendMessegeIcon , #user>#addPhoto {
+        width: 55;
+        height: 55;
+        border-radius: 50%;
+        background-color:transparent;
+        border: 1px solid darkgray;
+        padding: 0.2rem;
+        flex-shrink: 0;
+}
+#user>#sendMessegeIcon:hover , #user>#addPhoto:hover {
+        width: 55;
+        height: 55;
+        border-radius: 50%;
+        background-color:transparent;
+        border: 1px solid black;
+        box-shadow: 2px 1px 5px #acacac;
+        padding: 0.2rem;
+        flex-shrink: 0;
+}
+
+
+
+#user>#sendMessegeIcon img , #user>#addPhoto img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
 }
