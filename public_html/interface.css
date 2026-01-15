@@ -28,7 +28,7 @@ header {
         border: 1px solid darkgray;
         position: absolute;
         top: 10%;
-        left: 90%;
+        right: 1em;
         padding: 0.1em;
 }
 
