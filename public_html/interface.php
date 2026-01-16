@@ -18,10 +18,9 @@
         <div id="user">
                 <button id="userIcon">
                         <svg width="70" height="70" viewBox="0 0 32 32">
-                                <image href="images/anonymusUserIcon.svg" width="32" height="32"/>
+                                <image href="images/anonymusUserIcon.svg" width="31" height="31"/>
                         </svg>
-                </button>
-
+                </button>       
 
                 <input id="fastmsg" type="text" autocomplete="off" id="searchvalue" placeholder="A Cosa stai Pensando?..."/>
                 
@@ -30,13 +29,14 @@
                                 <image width="32" height="32" href="images/sendMessageIcon.svg"/>
                         </svg>
                 </button>
-                <button id="addPhoto">
-                        <svg width="43" height="35" viewBox="0 0 32 32">
-                                <image width="32" height="32" href="images/addPictureIcon.svg"/>
-                        </svg>
-                </button>
+                <form action="addPhoto.php">
+                        <button id="addPhoto">
+                                <svg width="43" height="35" viewBox="0 0 32 32">
+                                        <image width="32" height="32" href="images/addPictureIcon.svg"/>
+                                </svg>
+                        </button>
+                </form>
         </div>
-
 
 
         <aside class="panel"></aside>        
