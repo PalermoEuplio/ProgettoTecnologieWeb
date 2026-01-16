@@ -10,19 +10,40 @@
                     <div id="post" class="panel">
                             <form id="postform">
                                     <h1>Condividi i tuoi Meme</h1>
-                                    <p>Aggiungi una foto: </p>
+                                    
+
                                     <div id="input">
+                                        <p>Aggiungi una foto: </p>
+                                        <p>Descrizione: </p>
+
                                         <div id="dropzone">
-                                            Trascina e rilascia qui
-                                            <input type="file" multiple style="display: none;" accept="image/*"></input>
+                                                <svg width="43" height="35" viewBox="0 0 32 32">
+                                                        <image width="32" height="32" href="images/dragAndDropIcon.svg" style="opacity: 0.5;"/>
+                                                </svg>
+                                            <input id="fileInput" type="file" multiple style="display: none;" accept="image/*"></input> 
                                         </div>
-                                        <input type="file" accept="image/*"></input>
+                                        <textarea id="text" ></textarea>
+                                        
                                     </div>
-                                    <p>Descrizione: </p>
-                                    <input type="text"></input>
+                                    
+                                    
                                     <button>Carica Foto</button>
                             </form>
                     </div>
                 </div>
+                <script>
+                        const dropArea = document.getElementById("dropzone");
+                        const fileInput = document.getElementById("fileInput");
+
+                        dropArea.addEventListener("click", () => {
+                        fileInput.click();
+                        });
+
+                        fileInput.addEventListener("change", () => {
+                        const files = fileInput.files;
+                        console.log("File selezionati:", files);
+                        // qui puoi fare quello che vuoi con i file
+                        });
+                </script>
         </body>
 </html>
