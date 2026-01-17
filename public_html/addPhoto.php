@@ -20,30 +20,84 @@
                                                 <svg width="43" height="35" viewBox="0 0 32 32">
                                                         <image width="32" height="32" href="images/dragAndDropIcon.svg" style="opacity: 0.5;"/>
                                                 </svg>
-                                            <input id="fileInput" type="file" multiple style="display: none;" accept="image/*"></input> 
+                                            <input id="fileInput" type="file" style="display: none;" accept="image/*"></input> 
                                         </div>
                                         <textarea id="text" ></textarea>
-                                        
                                     </div>
-                                    
                                     
                                     <button>Carica Foto</button>
                             </form>
                     </div>
                 </div>
                 <script>
-                        const dropArea = document.getElementById("dropzone");
+                        const droparea = document.getElementById("dropzone");
                         const fileInput = document.getElementById("fileInput");
 
-                        dropArea.addEventListener("click", () => {
-                        fileInput.click();
+                        droparea.addEventListener("click", () => {
+                                fileInput.click();
                         });
 
-                        fileInput.addEventListener("change", () => {
-                        const files = fileInput.files;
-                        console.log("File selezionati:", files);
-                        // qui puoi fare quello che vuoi con i file
+                        fileInput.addEventListener("change", (e) => {
+                                displayImages(e.target.files);
                         });
+                       
+
+                        droparea.addEventListener("drop", dropHandler);
+
+                        window.addEventListener("drop", (e) => {
+                                e.preventDefault();
+                        });
+                        droparea.addEventListener("dragover", (e) => {
+                                const fileItems = [...e.dataTransfer.items].filter(
+                                        (item) => item.kind === "file",
+                                );
+                                if (fileItems.length > 0) {
+                                        e.preventDefault();
+                                if (fileItems.some((item) => item.type.startsWith("image/"))) {
+                                        e.dataTransfer.dropEffect = "copy";
+                                } else {
+                                        e.dataTransfer.dropEffect = "none";
+                                }
+                                }
+                        });
+
+                        window.addEventListener("dragover", (e) => {
+                                const fileItems = [...e.dataTransfer.items].filter(
+                                        (item) => item.kind === "file",
+                                );
+                                if (fileItems.length > 0) {
+                                        e.preventDefault();
+                                        if (!droparea.contains(e.target)) {
+                                                e.dataTransfer.dropEffect = "none";
+                                        }
+                                }
+                        });
+
+                        const preview = document.getElementById("dropzone");
+
+                        function displayImages(files) {
+                                const file = files[0];
+                                if (file.type.startsWith("image/")) {
+                                        preview.innerHTML = "";
+                                        const img = document.createElement("img");
+                                        img.src = URL.createObjectURL(file);
+                                        img.alt = file.name;
+                                        img.classList.add("preview-image");
+                                        preview.appendChild(img);
+                                }
+                                
+                        }
+
+                        function dropHandler(ev) {
+                                ev.preventDefault();
+                                const files = [...ev.dataTransfer.items]
+                                .map((item) => item.getAsFile())
+                                .filter((file) => file);
+                                displayImages(files);
+                        }
+
+
+
                 </script>
         </body>
 </html>
