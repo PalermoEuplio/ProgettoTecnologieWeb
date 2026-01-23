@@ -1,16 +1,18 @@
 html, body {
         margin: 0;
         padding: 0;
+        background: linear-gradient(to bottom, #f1d295cf, #FFFBDD);
 }
+
 
 input[type="text"], button {
         border-radius: 20px;
-        border: 1px solid darkgray;
+        border: 1px solid rgb(78, 78, 78);
 }
 
 input[type="text"]:focus {
         outline: none;
-        border: 3px solid lightgreen;
+        border: 2px solid rgba(143, 31, 31, 0.758);
 
 }
 
@@ -20,7 +22,7 @@ button {
 
 
 .panel {
-        background-color: #ddd;
+        background-color: #d16547;
         border-color: #aaa;
         border-width: 1px;
 }

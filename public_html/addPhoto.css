@@ -1,3 +1,14 @@
+body>div {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 #post {
         display: flex;
         align-items: center;
@@ -5,8 +16,11 @@
         position: absolute;
         width: 50rem;
         height: 35rem;
-        border-style: solid;
+        border-style: solid black 2px;
+        background:#d16547;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         padding: 1em 0;
+        border-radius: 2em;
 }
 
 #postform {
@@ -20,6 +34,7 @@
 #postform>button {
         margin-top: 3em;
         width: 80%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #postform>p {
@@ -32,33 +47,6 @@
         width: 80%;
 }
 
-body>div {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
-}
-
-#input>#dropzone {
-        width: 90%;
-        height: 15rem;
-        border: 2px dashed gray;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: gray;
-        cursor:pointer;
-}
-
-#dropzone img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
 
 
 #input{
@@ -72,6 +60,26 @@ body>div {
 
 #input>p{
     margin-left: 1em;
+    font-size: large;
+}
+
+#input>#dropzone {
+        width: 90%;
+        height: 15rem;
+        border: 2px dashed rgb(98, 98, 98);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+        cursor:pointer;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(46, 46, 46, 0.412);
+}
+#dropzone img {
+    width: 200%;
+    height: 110%;
+    object-fit: cover; 
 }
 
 #input>#text{
@@ -82,4 +90,11 @@ body>div {
     text-align: justify;
     border-color: darkgray;
     border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+body>footer{
+        position: fixed;
+        bottom: 0;
 }

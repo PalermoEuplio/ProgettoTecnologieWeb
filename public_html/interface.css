@@ -1,13 +1,16 @@
 /* Header */
 
 header {
+        top:0;
+        left:0;
         display: flex;
         justify-content: center;
-        z-index: 2;
+        z-index: 3;
         position: fixed;
         width: 100%;
         height: 5rem;
         border-bottom-style: solid;
+        box-shadow: rgba(0, 0, 0, 0.338) 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
 }
 
 #searchbar {
@@ -46,13 +49,14 @@ header {
 /* Aside */
 
 aside {
-        z-index: 1;
+        z-index: 2;
         position: fixed;
         height: 100%;
-        width: 25vw;
+        width: 25%;
         right: 0;
         top: 5rem;
         border-left-style: solid;
+        background-color: rgb(191, 181, 181);
 }
 
 /* Content */
@@ -65,44 +69,67 @@ section {
         height: 100%;
         right: 13rem;
         width: 100%;
+        pointer-events: none;
 }
 /*Parte centrale dell'utente*/
+
 #user {
-        z-index: 1;
-        position:fixed;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: 5.03125rem;
+    left:0;
+    right: 25%;
+    height: 7rem;
+    width: 73.3%;
+    gap: 1rem;
+
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+
+    box-shadow: black 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
+}
+
+
+#userform, #fastmsgform, #photoform {
         display: flex;
-        gap: 1rem;
-        padding: 0 2rem;
-        box-sizing: border-box;
-        top: 5rem;
-        width: 100%;
-        height: 13%;
-        border-bottom: 1px solid black;
         align-items: center;
+        gap: 1rem;
+}
+
+#fastmsgform {
+        flex:1;
 }
 
 
-#user>#userIcon {
+
+#user>#userform>#userIcon {
     width: 70;
     height: 70;
     padding: 0;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid #2B5275;
     background: transparent;
     flex-shrink: 0;
 }
-#user>#userIcon:hover {
+#user>#userform>#userIcon:hover {
     width: 70;
     height: 70;
     padding: 0;
     border-radius: 50%;
-    border: 1px solid red;
     background: transparent;
     flex-shrink: 0;
-    box-shadow: 2px 1px 5px #acacac;
+    box-shadow: #3C3F42 0px 0px 20px -1px;
 }
 
-#user>#userIcon img {
+#user>#userform>#userIcon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -110,46 +137,79 @@ section {
 
 
 
-#user>#fastmsg{
-        flex:1;
-        max-width: 600px;
+#user>#fastmsgform>#fastmsg{
+        width: 70%;
         height: 60;
-        margin-left: 15rem;
-        margin-right: 0.01rem;
         border-radius: 15px;
         padding: 0 1rem;
         text-align: center;
+        margin-left: 15%;
+        background-color: #91979d81;
+        box-shadow: black 0px 3px 10px -2px;
+        
+}
+#user>#fastmsgform>#sendMessegeIcon{
+        margin-left: 10%;
 }
 
-#user>form{
+
+#user>#photoform{
         width: 55;
         height: 39.8;
 }
 
-#user>#sendMessegeIcon , #user>form>#addPhoto {
+#user>#fastmsgform>#sendMessegeIcon , #user>#photoform>#addPhoto {
         width: 55;
         height: 55;
         border-radius: 50%;
-        background-color:transparent;
-        border: 1px solid darkgray;
+        background-color:rgba(0, 0, 0, 0.175);
+        border: 1px solid #2B5275;
         padding: 0.2rem;
         flex-shrink: 0;
 }
-#user>#sendMessegeIcon:hover , #user>form>#addPhoto:hover {
+#user>#fastmsgform>#sendMessegeIcon:hover , #user>#photoform>#addPhoto:hover {
         width: 55;
         height: 55;
         border-radius: 50%;
-        background-color:transparent;
         border: 1px solid black;
-        box-shadow: 2px 1px 5px #acacac;
+        box-shadow: #3C3F42 0px 0px 20px -1px;
         padding: 0.2rem;
         flex-shrink: 0;
 }
 
 
 
-#user>#sendMessegeIcon img , #user>form>#addPhoto img {
+#user>#fastmsgform>#sendMessegeIcon img , #user>#photoform>#addPhoto img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+}
+
+#main {
+    position: relative;
+    display: flex;
+    right: 25%;
+    width: 75%;
+    margin-top: 13.8rem;
+    left:0;
+    overflow-y: auto;
+    min-height: calc(100vh - 13.8rem); 
+    align-items: center;
+
+}
+
+
+#main>#content{
+        flex:1;
+        padding-top: 8rem;
+        background-color: transparent;
+        border: 1px solid pink;
+
+}
+
+#main>footer{
+        margin-top: auto;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem 0;
 }

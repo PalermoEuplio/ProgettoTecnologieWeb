@@ -29,6 +29,8 @@
                             </form>
                     </div>
                 </div>
+
+
                 <script>
                         const droparea = document.getElementById("dropzone");
                         const fileInput = document.getElementById("fileInput");
@@ -99,5 +101,7 @@
 
 
                 </script>
+
+                <?php include 'footer.php'; ?>
         </body>
 </html>
