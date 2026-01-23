@@ -49,11 +49,6 @@
                                 <h2>Benvenuto nel nostro sito!</h2>
                                 <p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
                 </div>
-
-
-
-
-                
                 <footer>
                         <?php include 'footer.php'; ?>
                 </footer>

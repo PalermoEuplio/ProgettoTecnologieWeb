@@ -188,23 +188,26 @@ section {
 #main {
     position: relative;
     display: flex;
+    flex-direction: column;
     right: 25%;
     width: 75%;
     margin-top: 13.8rem;
     left:0;
     overflow-y: auto;
     min-height: calc(100vh - 13.8rem); 
-    align-items: center;
+    align-items: left;
+    justify-content: left;
 
 }
 
 
 #main>#content{
+        align-items: center;
+        justify-content: center;
         flex:1;
         padding-top: 8rem;
         background-color: transparent;
         border: 1px solid pink;
-
 }
 
 #main>footer{
