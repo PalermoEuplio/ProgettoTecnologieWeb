@@ -1,17 +1,45 @@
 #login {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2,42%);
         justify-content: center;
         padding: 0.2em;
         position: absolute;
-        width: 25rem;
+        width: 45rem;
         height: 30rem;
         border-style: solid;
         padding: 1em 0;
 }
 
+#welcome{
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        height: 100%;           
+        text-align: left;
+}
+#welcome>h1{
+        font-size: 45;
+        text-align: center;
+}
+#welcome>p{
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-size: 23;
+}
+
+#loginform{
+        justify-content: center;
+        align-self: center;
+}
+
+#loginform>h1{
+        text-align: center;
+}
+
 #loginform>button {
+        border-radius: 1px;
         margin-top: 3em;
-        width: 80%;
+        width: 100%;
 }
 
 #loginform>p {
@@ -20,8 +48,9 @@
 }
 
 #loginform>input[type="text"] {
-        height: 2em;
-        width: 80%;
+        height: 2.2em;
+        width: 100%;
+        font-size: 20;
 }
 
 body>div {
