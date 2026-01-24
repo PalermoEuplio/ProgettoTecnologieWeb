@@ -21,9 +21,18 @@
 
                         <div id="userinfo">
                                 <form action="login.php">
-                                        <button id="login">Login</button>
+                                        <button id="login" style="cursor: pointer;">Login</button>
                                 </form>
                         </div>
+                        <script>
+                                function comparsa(x) {
+                                        document.getElementById(x).style.display = "block"; 
+                                }
+
+                                function scomparsa(x) { 
+                                        document.getElementById(x).style.display = "none"; 
+                                }
+                        </script>
                         
                 </div>
                               
@@ -51,39 +60,36 @@
                 <div id="content">
                                 <h2>Benvenuto nel nostro sito!</h2>
                                 <p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
 
-
-
-
-
-
-
-
-
-
-
-
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p><p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
+<p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
 
                 </div>
-                <footer>
-                        <?php include 'footer.php'; ?>
-                </footer>
+                <?php include 'footer.php'; ?>
         </div>
 
         <aside></aside> 
-
-
-
-        <script>
-                function comparsa(x) {
-                        document.getElementById(x).style.display = "block"; 
-                }
-
-                function scomparsa(x) { 
-                        document.getElementById(x).style.display = "none"; 
-                }
-        </script>
-       
-      
         
 </body>
