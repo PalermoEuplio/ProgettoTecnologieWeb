@@ -12,7 +12,7 @@ header {
         height: 7rem;
         border-bottom-style: solid;
         box-shadow: rgba(0, 0, 0, 0.338) 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
-        background-color: #fdc500;
+        background-color: #333333;
 }
 
 #registrazione{
@@ -24,6 +24,7 @@ header {
 #bg{
         width: 200px;
         height: 80px;
+        cursor: pointer;
 }
 
 
@@ -51,6 +52,7 @@ header {
         top: 10%;
         right: 1em;
         padding: 0.1em;
+        cursor: pointer;
 }
 
 #logo {
@@ -71,7 +73,7 @@ aside {
         right: 0;
         top: 5rem;
         border-left-style: solid;
-        background-color: rgb(191, 181, 181);
+        background-color: #48e5c2;
 }
 
 /* Content */
@@ -232,12 +234,14 @@ section {
     align-items: center;
     right: 25%;
     width: 75%;
-    margin-top: 13.8rem;
+    margin-top: 7rem;
     left:0;
     overflow-y: auto;
     min-height: calc(100vh - 13.8rem); 
     align-items: left;
     justify-content: left;
+    background:#fcfaf9;
+    background-color:#fcfaf9 ;
 
 }
 

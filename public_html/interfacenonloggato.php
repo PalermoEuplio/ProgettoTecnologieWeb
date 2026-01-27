@@ -1,4 +1,4 @@
-<header class="panel">
+<header>
         <div id="logo">
                 <h1>PORCODDIO</h1>
         </div>
