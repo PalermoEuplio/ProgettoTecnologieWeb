@@ -13,13 +13,17 @@
                                         <p>Non vediamo l'ora di tornare a vedere i tuoi memini...(¬‿¬)</p>
                                         <img src="images/ranalogin.jpg" height="200" width="200" id="immagine"/>
                                 </div>         
-                                <form id="loginform">
+                                <form id="loginform" action="login-manager.php" method="POST">
                                         <h1>Accedi</h1>
                                         <p>Username: </p>
-                                        <input type="text"></input>
+                                        <label for="username">
+                                                <input type="text" name="username" id="username" required></input>
+                                        </label>
                                         <p>Password: </p>
-                                        <input type="text"></input>
-                                        <button>Accedi</button>
+                                        <label for="password">
+                                                <input type="password" name="password" id="password" required></input>
+                                        </label>
+                                        <input type="submit" name="Accedi" value="Login"/>
                                 </form>
                         </div>
                 </div>

@@ -36,21 +36,28 @@
         text-align: center;
 }
 
-#loginform>button {
-        border-radius: 1px;
-        margin-top: 3em;
-        width: 100%;
-}
-
 #loginform>p {
         margin-bottom: 0.1em;
         color: #888;
 }
 
-#loginform>input[type="text"] {
+#loginform>label>input[type="text"] {
         height: 2.2em;
         width: 100%;
         font-size: 20;
+        border-radius: 20px;
+}
+#loginform>label>input[type="password"] {
+        height: 2.2em;
+        width: 100%;
+        font-size: 20;
+        border-radius: 20px;
+}
+#loginform>input[type="submit"] {
+        border-radius: 1px;
+        margin-top: 3em;
+        border-radius: 20px;
+        width: 100%;
 }
 
 body>div {
