@@ -1,19 +1,22 @@
 <header class="panel">
         <div id="logo">
-                <h1>Nome sito</h1>
+                <h1>PORCODDIO</h1>
         </div>
         <div id="searchbar">
                 <button id="searchicon">
-                        <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                                <image width="30" height="30" href="images/searchicon.svg"/>
+                        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                                <image width="40" height="40" href="images/searchicon.svg"/>
                         </svg>
                 </button>
                 <input type="text" autocomplete="off" id="searchvalue" placeholder="Cerca..."/>
         </div>
+        <form id="registrazione" action="login.php">
+                <button id="bg">REGISTRATI!</button>
+        </form>
 
 </header>
 <body>
-        <div id="user">
+        <!--<div id="user">
                 <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">
                         <svg id="userIcon" width="70" height="70" viewBox="0 0 31 31">
                                 <image href="images/anonymusUserIcon.svg" width="31" height="31"/>
@@ -54,7 +57,7 @@
                         </button>
                 </form>
                         
-        </div>
+        </div> -->
 
         <div id="main">
                 <div id="content">

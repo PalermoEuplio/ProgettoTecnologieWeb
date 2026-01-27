@@ -1,7 +1,7 @@
 <html>
         <head>
                 <meta encoding="utf-8"/>
-                <title>Sito web</title>
+                <title>HomePage</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <link rel="stylesheet" type="text/css" href="interfacenonloggato.css"/>
         </head>
