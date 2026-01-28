@@ -12,6 +12,9 @@
         </div>
 
 </header>
+<head>
+        <link rel="stylesheet" type="text/css" href="interface.css"/>
+<head>
 <body>
         <div id="user">
                 <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">
