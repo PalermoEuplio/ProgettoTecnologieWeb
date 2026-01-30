@@ -46,7 +46,7 @@
 <p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
 <p>Questo è un esempio di interfaccia utente creata con HTML e CSS.</p>
 
-                </div>
+        </div>
                 <?php include 'footer.php'; ?>
         </div>
 

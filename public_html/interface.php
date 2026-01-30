@@ -1,3 +1,4 @@
+<?php include "db.php" ?>
 <header class="panel">
         <div id="logo">
                 <h1>Nome sito</h1>
@@ -17,14 +18,35 @@
 <head>
 <body>
         <div id="user">
+                <?php
+                        $user = $_SESSION['username'];
+                        $pfp = get_img($user,$db);
+
+                        function get_img($user, $db){
+                                $sql = "SELECT pfp FROM utente WHERE username=$1;";
+                                $prep = pg_prepare($db, "sqlPfp", $sql); 
+                                $ret = pg_execute($db, "sqlPfp", array($user));
+                                if(!$ret) {
+                                        return false; 
+                                }
+                                else{
+                                        if ($row = pg_fetch_assoc($ret)){ 
+                                        return $row['pfp'];
+                                        }
+                                        else{
+                                        return false;
+                                        }
+                                }
+                        }
+
+
+                ?>
                 <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">
-                        <svg id="userIcon" width="70" height="70" viewBox="0 0 31 31">
-                                <image href="images/anonymusUserIcon.svg" width="31" height="31"/>
-                        </svg>
+                        <img id="userIcon" src="<?= htmlspecialchars($pfp) ?>"/>
 
                         <div id="userinfo">
-                                <form action="login.php">
-                                        <button id="login" style="cursor: pointer;">Login</button>
+                                <form action="endSession.php">
+                                        <button style="cursor: pointer;">Logout</button>
                                 </form>
                         </div>
                         <script>
