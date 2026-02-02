@@ -1,4 +1,3 @@
-<?php include "db.php" ?>
 <header class="panel">
         <div id="logo">
                 <h1>Nome sito</h1>
@@ -15,29 +14,27 @@
 </header>
 <head>
         <link rel="stylesheet" type="text/css" href="interface.css"/>
-<head>
+</head>
 <body>
         <div id="user">
-                <?php
-                        $user = $_SESSION['username'];
-                        $pfp = get_img($user,$db);
+                <?php   
+                        include "db.php";
+
+                        
 
                         function get_img($user, $db){
-                                $sql = "SELECT pfp FROM utente WHERE username=$1;";
-                                $prep = pg_prepare($db, "sqlPfp", $sql); 
-                                $ret = pg_execute($db, "sqlPfp", array($user));
-                                if(!$ret) {
-                                        return false; 
-                                }
-                                else{
-                                        if ($row = pg_fetch_assoc($ret)){ 
-                                        return $row['pfp'];
+                                $sql = "SELECT pfp FROM utente WHERE username=$1";
+                                $ret = pg_query_params($db, $sql, array($user));
+                                if($ret && $row = pg_fetch_assoc($ret)){
+                                        if(empty($row['pfp'])) {
+                                                return images/anonymusUserIcon.svg; 
                                         }
-                                        else{
-                                        return false;
-                                        }
+                                return $row['pfp'];
                                 }
                         }
+                        
+                        $user = $_SESSION['username'] ?? 'Ospite';
+                        $pfp = get_img($user,$db);
 
 
                 ?>

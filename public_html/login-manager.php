@@ -1,5 +1,4 @@
 <?php
-// 1. La sessione va iniziata all'inizio, prima di ogni output HTML
 include 'db.php';
 ?>
 <!DOCTYPE html>
@@ -15,24 +14,29 @@ include 'db.php';
             $user = $_POST['username'];
             $pass = $_POST['password'];
 
-            $hash = password_hash(get_pwd($user, $db),PASSWORD_DEFAULT);
 
+            $temp = get_pwd($user, $db);
+            if(!$temp)
+                $hash=false;
+            else $hash = password_hash($temp,PASSWORD_DEFAULT);
 
-            if(!$hash){
-                echo "<p> L'utente $user non esiste. <a href=\"login.php\">Riprova</a></p>";
+            if($hash == false){     //Caso Utente non registrato in database
+                header("Location: login.php?err=1");
+                exit();
             }
             else{
                 if(password_verify($pass, $hash)){
                     $_SESSION['username'] = $user;
-                    echo "<meta http-equiv='Refresh' content='0; URL=interface.php'>";
+                    echo "<meta http-equiv='Refresh' content='0; URL=index.php'>";
                 }
                 else{
-                    echo '<p>Username o password errati. <a href="login.php">Riprova</a></p>';
+                    header("Location: login.php?err=2");    //Caso Password Errata
+                    exit();
                 }
             }
         }
         else {
-            echo "<p>ERRORE: Accesso non consentito. <a href=\"login.php\">Torna al login</a></p>";
+            exit(); //Accesso non consentito
         }
 
 

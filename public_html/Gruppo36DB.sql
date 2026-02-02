@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS utente cascade;
 
 CREATE TABLE utente(
 	username varchar(100),
-	password varchar(25),
+	password varchar(255),
 	pfp varchar(255)
 );
 

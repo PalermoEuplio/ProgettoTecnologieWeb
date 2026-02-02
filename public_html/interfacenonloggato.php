@@ -11,7 +11,7 @@
                 <input type="text" autocomplete="off" id="searchvalue" placeholder="Cerca..."/>
         </div>
         <form id="registrazione" action="login.php">
-                <button id="bg">REGISTRATI!</button>
+                <button id="bg">ACCEDI!</button>
         </form>
 
 </header>
