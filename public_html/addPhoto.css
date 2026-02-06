@@ -87,7 +87,7 @@ body>div {
     object-fit: cover; 
 }
 
-#input>#text{
+#input>#description{
     margin-left: 1em;
     width: 90%;
     height: 90%;
@@ -97,6 +97,17 @@ body>div {
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     resize: none;
+}
+#input>#tag{
+        margin-left: 1em;
+        width: 90%;
+        height: 90%;
+        background-color: cornsilk;
+        text-align: justify;
+        border-color: darkgray;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        resize: none;
 }
 
 

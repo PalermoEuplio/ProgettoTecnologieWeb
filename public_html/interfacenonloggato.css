@@ -93,35 +93,100 @@ section {
         pointer-events: none;
 }
 
+/* Parte dei Post */
+
 #main {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 74.8%;
+    width: 74.9%;
     top: 6.7rem;
     overflow-y: auto;
     min-height: calc(100vh - 6.7rem); 
     align-items: left;
     justify-content: left;
+    background-color: #44444442;
 }
 
 
 #main>#content{
+        padding-top:5px;
         align-items: center;
         justify-content: center;
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+        margin: 0 auto;
+        padding-left:10px;
+        padding-right:10px;
+        width: 65%;
         height: 100%;
         flex:1;
-        background-color: transparent;
-        border: 1px solid pink;
+        background-color: whitesmoke;
+        box-shadow: black 0px 3px 10px -2px;
+}
+#content>.container-post{
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns:25% 45% 30%;
+        gap:5px;
 }
 
+.post{
+        border: 1px solid green;
+        height: 35em;
+        overflow: hidden;
+        margin-bottom: 5px;
+        margin-top: 5px;
+}
+.post img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+.description{
+        border: 1px solid red;
+        height: 20em;
+        overflow-y: scroll;
+        border-radius: 10px;
+        margin-left: 5px;
+        padding-left: 5px;
+}
+.description.long{
+        grid-column: span 2;
+        height: 10em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+.comment{
+        border: 1px solid blue;
+        height: 20em;
+        overflow-y: scroll;
+        margin-right: 5px;
+        padding-right: 5px;
+        border-radius: 10px;
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: break-word;
+}
+.comment.short{
+        height: 10em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+
+.post-separator { 
+    border-bottom: 2px solid black;
+    height: 0;
+}
+
+
 #main>footer{
-        margin-top: auto;
+        margin-top: -2px;
         bottom: 0;
-        width: 50%;
+        width: 100%;
         padding: 1rem 0;
+        border-top: 2px solid black;
+        box-shadow: black 0px 3px 10px -2px;
+        background-color: whitesmoke;
 }

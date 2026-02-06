@@ -119,6 +119,7 @@ section {
 
 #fastmsgform {
         flex:1;
+        padding-bottom: 0.9em;
 }
 
 
@@ -167,12 +168,13 @@ section {
         border: 2px solid black;
         padding: 0 1rem;
         text-align: center;
+        padding-top: 17px;
         margin-left: 15%;
         background-color: #91979d81;
         box-shadow: black 0px 3px 10px -2px;
-        
+        resize: none;        
 }
-#user>#fastmsgform>#sendMessegeIcon{
+#user>#fastmsgform>#sendMessege{
         margin-left: 10%;
 }
 
@@ -182,7 +184,7 @@ section {
         height: 39.8;
 }
 
-#user>#fastmsgform>#sendMessegeIcon , #user>#photoform>#addPhoto {
+#user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
         width: 55;
         height: 55;
         border-radius: 50%;
@@ -191,7 +193,7 @@ section {
         padding: 0.2rem;
         flex-shrink: 0;
 }
-#user>#fastmsgform>#sendMessegeIcon:hover , #user>#photoform>#addPhoto:hover {
+#user>#fastmsgform>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
         width: 55;
         height: 55;
         border-radius: 50%;
@@ -204,11 +206,13 @@ section {
 
 
 
-#user>#fastmsgform>#sendMessegeIcon img , #user>#photoform>#addPhoto img {
+#user>#fastmsgform>#sendMessege img , #user>#photoform>#addPhoto img {
         width: 100%;
         height: 100%;
         object-fit: contain;
 }
+
+/*Parte dei Post*/
 
 #main {
     position: relative;
@@ -221,24 +225,136 @@ section {
     min-height: calc(100vh - 6.7rem); 
     align-items: left;
     justify-content: left;
+    background-color: #44444442;
 }
 
 
 #main>#content{
+        padding-top:5px;
         align-items: center;
         justify-content: center;
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+        margin: 0 auto;
+        padding-left:10px;
+        padding-right:10px;
+        width: 65%;
         height: 100%;
         flex:1;
-        background-color: transparent;
-        border: 1px solid pink;
+        background-color: whitesmoke;
+        box-shadow: black 0px 3px 10px -2px;
+}
+
+
+#content>.container-post{
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns:25% 45% 30%;
+        gap:5px;
+}
+
+.post{
+        border: 1px solid green;
+        height: 35em;
+        overflow: hidden;
+        margin-bottom: 5px;
+        margin-top: 5px;
+}
+.post img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+.description{
+        border: 1px solid red;
+        height: 20em;
+        overflow-y: scroll;
+        border-radius: 10px;
+        margin-left: 5px;
+        padding-left: 5px;
+}
+.description.long{
+        grid-column: span 2;
+        height: 10em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+.comment{
+        border: 1px solid blue;
+        height: 20em;
+        overflow-y: scroll;
+        margin-right: 5px;
+        padding-right: 5px;
+        border-radius: 10px;
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: break-word;
+}
+.comment.short{
+        height: 10em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+
+#fastcomment{
+        position:sticky;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        bottom:3px;
+        width: 96%;
+        margin-left: 5px;
+        box-shadow: black 0px 3px 10px -2px;
+        background: rgba(245, 245, 245, 0.74);
+}
+#fastcomment>.textcomment{
+        margin-right: 8px;
+        resize: none;
+        border-radius: 10px;
+        width: 198px;
+        height: 5em;
+}
+
+#fastcomment>#sendComment{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+}
+
+#fastcomment>#sendComment img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+}
+
+.deletepost{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px; 
+        cursor: pointer;
+        background: transparent;
+        margin-bottom: 2px;
+}
+.deletepost img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.post-separator {
+    grid-column: 1 / span 3; 
+    border-bottom: 2px solid black;
+    height: 0;
 }
 
 #main>footer{
-        margin-top: auto;
+        margin-top: -2px;
         bottom: 0;
-        width: 50%;
+        width: 100%;
         padding: 1rem 0;
+        border-top: 2px solid black;
+        box-shadow: black 0px 3px 10px -2px;
+        background-color: whitesmoke;
 }

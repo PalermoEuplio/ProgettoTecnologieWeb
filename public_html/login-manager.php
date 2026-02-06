@@ -1,37 +1,43 @@
 <?php
-include 'db.php';
+
+    // File Php Contenente la logica applicativa legata al login
+    
+
+    include 'db.php';   // Connessione al database
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Pagina di Login</title>
-</head>
 <body>
     <?php
-        if(isset($_POST['username']) && isset($_POST['password'])){
+
+        if(isset($_POST['username']) && isset($_POST['password'])){ //Verifico che la username e la pasword siano state settate correttamente
             
-            $user = $_POST['username'];
+            $user = $_POST['username']; // Salvo username e password
             $pass = $_POST['password'];
 
 
-            $temp = get_pwd($user, $db);
-            if(!$temp)
+            $temp = get_pwd($user, $db);    // Carico la password relativa allo username inviato per farne il controllo
+
+            if(!$temp)  // Controllo il valore tornato dalla funzione e ne ricavo il relativo hash
                 $hash=false;
             else $hash = password_hash($temp,PASSWORD_DEFAULT);
 
             if($hash == false){     //Caso Utente non registrato in database
-                header("Location: login.php?err=1");
+
+                header("Location: login.php?err=1");    // Ritorno a login.php con id errore 1
                 exit();
+
             }
             else{
-                if(password_verify($pass, $hash)){
-                    $_SESSION['username'] = $user;
+                if(password_verify($pass, $hash)){  // Caso di password corretta
+
+                    $_SESSION['username'] = $user;  // Aggiorno la sessione e reindirizzo alla pagina principale
                     echo "<meta http-equiv='Refresh' content='0; URL=index.php'>";
+
                 }
-                else{
-                    header("Location: login.php?err=2");    //Caso Password Errata
+                else{   //Caso Password Errata
+
+                    header("Location: login.php?err=2");    // Ritorno a login.php con id errore 2
                     exit();
+
                 }
             }
         }
@@ -40,19 +46,20 @@ include 'db.php';
         }
 
 
+        function get_pwd($user, $db){   // Funzione che consente di ottenere la password a partire dall'utente
 
-
-
-        function get_pwd($user, $db){
-            $sql = "SELECT password FROM utente WHERE username=$1;";
+            $sql = "SELECT password FROM utente WHERE username=$1;";    // Query per ricavare la password
             $prep = pg_prepare($db, "sqlPassword", $sql); 
             $ret = pg_execute($db, "sqlPassword", array($user));
-            if(!$ret) {
+
+            if(!$ret) { // Verifico se il valore tornato dalla query esiste (return password) o meno (return false)
+
                 return false; 
+
             }
             else{
                 if ($row = pg_fetch_assoc($ret)){ 
-                    return $row['password'];
+                    return $row['password'];    // Ritorno della password salvata nel database
                 }
                 else{
                     return false;
@@ -61,4 +68,3 @@ include 'db.php';
         }
     ?>
 </body>
-</html>

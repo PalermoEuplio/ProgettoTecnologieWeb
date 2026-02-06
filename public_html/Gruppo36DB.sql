@@ -12,3 +12,4 @@ GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO www;
 INSERT INTO	 utente (username, password,pfp) VALUES
 ('Euplio', 'Daje','profilepictures/gokupfp.jpg'),
 ('Giacomo','tavolo','profilepictures/ranapfp.jpg');
+

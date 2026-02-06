@@ -1,5 +1,6 @@
 <html>
     <head>
+        <!-- Php contenente il footer che viene richiamato in tutte le pagine del sito -->
         <link rel="stylesheet" type="text/css" href="footer.css">
         <link rel="stylesheet" type="text/css">
     </head>
