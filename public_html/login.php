@@ -29,44 +29,48 @@
                 <div>
                         <div id="login" class="panel">  <!--Div centrale della pagina-->
 
-                                <div id="welcome">
+                                <div id="left">
 
                                         <h1>Bentornato!</h1>
                                         <p>Non vediamo l'ora di tornare a vedere i tuoi memini...(¬‿¬)</p>
                                         <img src="images/ranalogin.jpg" height="200" width="200" id="immagine"/>
 
                                 </div>   
+                                
+                                <div id="right">
 
-                                <form id="loginform" action="login-manager.php" method="POST">  <!-- Form necessario al login -->
+                                        <form id="loginform" action="login-manager.php" method="POST">  <!-- Form necessario al login -->
 
-                                        <h1>Accedi</h1>
+                                                <h1>Accedi</h1>
 
-                                        <p>* Username: </p>
-                                        <label for="username">
-                                                <input type="text" name="username" id="username" required></input>      <!-- Campo Username -->
-                                        </label>
+                                                <p>* Username: </p>
+                                                <label for="username">
+                                                        <input type="text" name="username" id="username" required></input>      <!-- Campo Username -->
+                                                </label>
 
-                                        <p>* Password: </p>
-                                        <label for="password">
-                                                <input type="password" name="password" id="password" required></input>  <!-- Campo password -->
-                                        </label>
+                                                <p>* Password: </p>
+                                                <label for="password">
+                                                        <input type="password" name="password" id="password" required></input>  <!-- Campo password -->
+                                                </label>
 
-                                        <input type="submit" name="Accedi" value="Login"/>      <!-- Bottone d'accesso -->
+                                                <input type="submit" name="Accedi" value="Login"/>      <!-- Bottone d'accesso -->
 
-                                        <p id="errmsg" style="color: red; margin-top:2em; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
-                                                <?php echo $error_msg; ?>
-                                        </p>
+                                                <p id="errmsg" style="color: red; margin-top:2em; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
+                                                        <?php echo $error_msg; ?>
+                                                </p>
 
-                                </form>
+                                        </form>
 
-                                <form action="registration.php">        <!-- Form necessario al reinvio alla pagina di registrazione-->
-                                                <input type="submit" name="Registrati" value="Registrati"/>
-                                </form>
+                                        <form action="registration.php">        <!-- Form necessario al reinvio alla pagina di registrazione-->
+                                                        <input type="submit" name="Registrati" value="Registrati"/>
+                                        </form>
 
+                                </div>
                         </div>
-                </div>
 
-                <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
+                        <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
+
+                </div>
 
         </body>
 </html>
