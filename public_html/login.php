@@ -43,12 +43,12 @@
 
                                                 <h1>Accedi</h1>
 
-                                                <p>* Username: </p>
+                                                <p>Username: </p>
                                                 <label for="username">
                                                         <input type="text" name="username" id="username" required></input>      <!-- Campo Username -->
                                                 </label>
 
-                                                <p>* Password: </p>
+                                                <p>Password: </p>
                                                 <label for="password">
                                                         <input type="password" name="password" id="password" required></input>  <!-- Campo password -->
                                                 </label>

@@ -12,6 +12,7 @@ head,body{
         height: 26rem;
         border-style: solid;
         padding: 1em 0;
+        margin-top: 2rem;
 }
 
 
@@ -46,27 +47,28 @@ head,body{
 
 #loginform>p {
         margin-bottom: 0.1em;
-        color: #888;
+        color: #000000;
+}
+
+#loginform>label>input, input[type="submit"] {
+        border-radius: 20px;
+        border: 1.5px solid #888;
 }
 
 #loginform>label>input[type="text"] {
         height: 2.2em;
         width: 100%;
         font-size: 20;
-        border-radius: 20px;
 }
 #loginform>label>input[type="password"] {
         height: 2.2em;
         width: 100%;
         font-size: 20;
-        border-radius: 20px;
         margin-bottom: 2em;
 }
 
 input[type="submit"] {
         font-size: 14;
-        border-radius: 20px;
-        border: 1.5px solid #888;
         width: 100%;
         margin-top: 0;
         padding: 0.5em;
@@ -81,6 +83,7 @@ body>div {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        overflow-y: auto;
 }
 
 body>footer{
