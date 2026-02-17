@@ -13,22 +13,10 @@ header {
         z-index: 3;
         position: fixed;
         width: 100%;
-        height: 6rem;
+        height: 4rem;
         border-bottom-style: solid;
         box-shadow: rgba(0, 0, 0, 0.338) 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
         background-color: #333333;
-}
-
-/* Footer */
-
-footer{
-        margin-top: -2px;
-        bottom: 0;
-        width: 100%;
-        padding: 1rem 0;
-        border-top: 2px solid black;
-        box-shadow: black 0px 3px 10px -2px;
-        background-color: whitesmoke;
 }
 
 /* Aside */
@@ -39,7 +27,7 @@ aside {
         height: 100%;
         width: 25%;
         right: 0;
-        top: 5rem;
+        top: 4.2rem;
         border-left-style: solid;
         background-color: #48e5c2;
 }
@@ -64,11 +52,11 @@ aside {
 }
 
 #searchbar>input[type="text"] {
-        height: 2em;
+        height: 1.8em;
         width: 200%;
         box-shadow: black 0px 3px 10px -2px;
         text-decoration: wavy;
-        font-size: 30;
+        font-size: 18;
 }
 
 #searchbar>#searchicon {
@@ -76,8 +64,7 @@ aside {
         border-radius: 20px;
         border: 1px solid darkgray;
         position: absolute;
-        top: 10%;
-        right: 1em;
+        right: 0.5em;
         padding: 0.1em;
         cursor: pointer;
 }
@@ -96,48 +83,41 @@ aside {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    top: 6rem;
-    height: 5rem;
+    top: 4.2rem;
+    height: 1rem;
     width: 72.3%;
     gap: 1rem;
-
-    padding-top: 1rem;
-    padding-bottom: 0.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
     border-bottom: 1px solid black;
     background-color: white;
-
     box-shadow: black 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
-    overflow: visible;
 }
 
 
-#userform, #fastmsgform, #photoform {
+#userform, #fastmsgform, #photoform{
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
 }
 
 #userform{
         position:relative;
         z-index: 1;
-        padding-bottom: 0.7rem;
 }
 
 
 #fastmsgform {
-        flex:1;
-        padding-bottom: 0.9em;
+        flex: 1;
 }
 
-
+#photoform {
+        padding-top: 1rem;
+}
 
 #user>#userform>#userIcon {
         z-index: 1;
-        width: 70;
-        height: 70;
-        padding: 0;
+        width: 40;
+        height: 40;
         border-radius: 50%;
         border: 1px solid #2B5275;
         flex-shrink: 0;
@@ -172,43 +152,31 @@ aside {
 
 #user>#fastmsgform>#fastmsg{
         width: 70%;
-        height: 60;
+        height: 40;
         border-radius: 15px;
         border: 2px solid black;
-        padding: 0 1rem;
         text-align: center;
-        padding-top: 17px;
+        padding-top: 11px;
         margin-left: 15%;
         background-color: #91979d81;
         box-shadow: black 0px 3px 10px -2px;
         resize: none;        
 }
-#user>#fastmsgform>#sendMessege{
-        margin-left: 10%;
-}
-
-
-#user>#photoform{
-        width: 55;
-        height: 39.8;
-}
 
 #user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
-        width: 55;
-        height: 55;
+        width: 40;
+        height: 40;
         border-radius: 50%;
         background-color:rgba(0, 0, 0, 0.175);
         border: 1px solid #2B5275;
-        padding: 0.2rem;
         flex-shrink: 0;
 }
 #user>#fastmsgform>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
-        width: 55;
-        height: 55;
+        width: 40;
+        height: 40;
         border-radius: 50%;
         border: 1px solid black;
         box-shadow: #3C3F42 0px 0px 20px -1px;
-        padding: 0.2rem;
         flex-shrink: 0;
         cursor: pointer;
 }
@@ -229,7 +197,7 @@ aside {
     flex-direction: column;
     align-items: center;
     width: 74.8%;
-    top: 12.8rem;
+    top: 4.2rem;
     overflow-y: auto;
     min-height: calc(100vh - 6.7rem); 
     align-items: left;
@@ -239,15 +207,13 @@ aside {
 
 
 #main>#content {
-        padding-top:5px;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        padding-left:10px;
-        padding-right:10px;
+        padding: 1em;
         width: 65%;
         height: 100%;
-        flex:1;
+        flex: 1;
         background-color: whitesmoke;
         box-shadow: black 0px 3px 10px -2px;
 }
@@ -257,8 +223,8 @@ aside {
         justify-content: center;
         align-items: center;
         display: grid;
-        grid-template-columns:25% 45% 30%;
-        gap:5px;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
 }
 
 .post {
@@ -267,32 +233,30 @@ aside {
         overflow: hidden;
         margin-bottom: 5px;
         margin-top: 5px;
+        border-radius: 10px;
 }
 .post img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 10px;
 }
 .description {
         border: 1px solid red;
-        height: 20em;
-        overflow-y: scroll;
+        max-height: 10em;
+        overflow-y: auto;
         border-radius: 10px;
-        margin-left: 5px;
-        padding-left: 5px;
+        padding: 0.5em;
 }
 .description.long {
-        grid-column: span 2;
-        height: 10em;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        grid-row: span 2;
 }
 .comment {
         border: 1px solid blue;
-        height: 20em;
+        min-height: 8em;
+        max-height: 18em;
         overflow-y: scroll;
-        margin-right: 5px;
-        padding-right: 5px;
+        padding: 0.5em;
         border-radius: 10px;
         position:relative;
         display: flex;
@@ -306,13 +270,10 @@ aside {
 }
 
 #fastcomment {
-        position:sticky;
         display: flex;
         align-items: center;
         border-radius: 10px;
-        bottom:3px;
-        width: 96%;
-        margin-left: 5px;
+        width: 100%;
         box-shadow: black 0px 3px 10px -2px;
         background: rgba(245, 245, 245, 0.74);
 }
@@ -320,7 +281,7 @@ aside {
         margin-right: 8px;
         resize: none;
         border-radius: 10px;
-        width: 198px;
+        width: 90%;
         height: 5em;
 }
 

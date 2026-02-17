@@ -53,8 +53,8 @@
                         
                 <button id="sendMessege" onclick="send_post()"> <!-- Bottone necessario all'invio del post rapido -->
 
-                        <svg width="43" height="35" viewBox="0 0 32 32">
-                                <image width="32" height="32" href="images/sendMessageIcon.svg"/>       <!-- Immagine Bottone: Freccia di invio -->
+                        <svg width="30" height="30">
+                                <image width="30" height="30" href="images/sendMessageIcon.svg"/>       <!-- Immagine Bottone: Freccia di invio -->
                         </svg>
 
                 </button>
@@ -64,8 +64,8 @@
 
                 <button id="addPhoto">
 
-                        <svg width="43" height="35" viewBox="0 0 32 32">
-                                <image width="32" height="32" href="images/addPictureIcon.svg"/>        <!-- Immagine Bottone: +Foto -->
+                        <svg width="30" height="30" >
+                                <image width="30" height="30" href="images/addPictureIcon.svg"/>        <!-- Immagine Bottone: +Foto -->
                         </svg>
 
                 </button>

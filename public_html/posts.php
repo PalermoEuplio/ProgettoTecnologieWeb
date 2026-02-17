@@ -17,7 +17,7 @@
                 <div class="container-post" data-id-post="<?php echo $row['id_post']; ?>">      <!-- Container dei singoli post (Viene creato Iterativamente)-->
 
                         <div class="description <?php echo !$hasImage ? 'long' : ''; ?>">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
-                                                                                                                                (Se non c'è immagine occupa due colonne della griglia di container-post, altrimenti una)-->
+                                                                                                (Se non c'è immagine occupa due colonne della griglia di container-post, altrimenti una)-->
 
                                 <?php echo "Descrizione:<br>", $row['description']; ?>  <!-- Caricamento della descrizione dal database -->
 
@@ -44,7 +44,7 @@
                                         if (!empty($commenti)) {        // Verifico che vi siano dei commenti
                                                 
                                                 echo '<ul style="list-style-type: none; padding-left: 0px;">';  /* Necessario per la visuallizzazione in stile tabella
-                                                                                                                        con gli username a sinistra e il contenuto del commento a destra */
+                                                                                                        con gli username a sinistra e il contenuto del commento a destra */
                                                 
                                                 foreach ($commenti as $c) {     // Scorro i vari Commenti
 

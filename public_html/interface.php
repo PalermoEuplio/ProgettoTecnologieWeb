@@ -6,8 +6,8 @@
         <div id="searchbar">    <!-- Sezione della barra di ricerca in alto -->
 
                 <button id="searchicon">        <!-- Bottone per cercare -->
-                        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                                <image width="40" height="40" href="images/searchicon.svg"/>
+                        <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg">
+                                <image width="25" height="25" href="images/searchicon.svg"/>
                         </svg>
                 </button>
 
