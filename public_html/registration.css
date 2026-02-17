@@ -46,18 +46,28 @@
         width: 100%;
         font-size: 20;
         border-radius: 20px;
+        border: 1.5px solid #888;
 }
 #regform>label>input[type="password"] {
         height: 2.2em;
         width: 100%;
         font-size: 20;
         border-radius: 20px;
+        border: 1.5px solid #888;
 }
 #regform>input[type="submit"] {
-        border-radius: 1px;
-        margin-top: 3em;
-        border-radius: 20px;
-        width: 100%;
+        border-radius: 0px;
+        border-color: blue;
+        background-color: beige;
+        margin-top: 30px;
+        height: 2.2em;
+        font-size: 20;
+        width: 65%;
+        margin-left:55px;
+}
+#regform>input[type="submit"]:hover{
+        background-color: #FFE8B8;
+        cursor: pointer;
 }
 
 body{
@@ -78,7 +88,7 @@ body>div {
 
 body>footer{
         position: fixed;
-        bottom: 0;
+        bottom:225;
 }
 
 #dropzone {

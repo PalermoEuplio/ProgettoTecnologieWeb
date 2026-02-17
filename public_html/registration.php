@@ -41,6 +41,7 @@
 
                                                 </div>
                                                 <input id="fileInput" type="file" name="pfp" style="display: none;" accept="image/*"></input>   <!-- Input per permettere di cliccare per aggiungere la foto--> 
+                                                <p>Trascina qui la tua foto profilo!</p>
                                         </div>
 
                                 </div>
@@ -68,7 +69,7 @@
                                                 <?php echo $error_msg; ?>
                                         </p>
 
-                                        <input type="submit" name="Accedi" value="Login"/>      <!-- Pulsante d'invio del form -->
+                                        <input type="submit" name="Accedi" value="Registrati"/>      <!-- Pulsante d'invio del form -->
 
                                 </div>
 
@@ -78,6 +79,8 @@
                             <input type="submit" name="Registrati" value="Annulla"/>
                         </form>
                 </div>
+                
+                <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
 
 
                 <!--    Inizio della sezione di script per funzionamento della pagina      -->
@@ -164,7 +167,5 @@
 
 
                 </script>
-
-                <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
         </body>
 </html>

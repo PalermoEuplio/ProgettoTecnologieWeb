@@ -68,10 +68,15 @@ head,body{
 }
 
 input[type="submit"] {
-        font-size: 14;
+        font-size: 15;
         width: 100%;
         margin-top: 0;
         padding: 0.5em;
+        border-radius: 0;
+}
+input[type="submit"]:hover{
+        background-color: #FFE8B8;
+        cursor: pointer;
 }
 
 
