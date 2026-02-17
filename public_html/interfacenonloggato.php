@@ -19,7 +19,7 @@
                 if(!isset($_SESSION['username'])) {     // Controllo che permette la visualizzazione o meno del bottone per il login
                         ?>
                                 <form id="registrazione" action="login.php">    <!-- Form di reindirizzamneto alla pagina di login -->
-                                        <button id="bg">ACCEDI!</button>
+                                        <button id="bg">ACCEDI</button>
                                 </form>
                         <?php
                 }
