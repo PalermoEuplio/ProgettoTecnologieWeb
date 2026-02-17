@@ -85,10 +85,8 @@ section {
     justify-content: center;
     z-index: 1;
     top: 6rem;
-    left:0;
-    right: 25%;
     height: 5rem;
-    width: 73.3%;
+    width: 72.3%;
     gap: 1rem;
 
     padding-top: 1rem;
