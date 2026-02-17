@@ -4,13 +4,14 @@
         include 'db.php';       // Inclusa connessione al database
 
         $sql = "SELECT username FROM utente";   // Prendo la colonna degli username che servirà come identificativo per il nome della Sessione
+        
 ?>
 <html>
         <head>
                 <meta encoding="utf-8">
                 <link rel="stylesheet" type="text/css" href="interface.css">
                 <link rel="stylesheet" type="text/css" href="footer.css">
-                <script type="text/javascript" src="homepage.js"></script>
+                <script language="javascript"src="homepage.js"></script>
         </head>
         <body>
                 <?php include 'interface.php'?>

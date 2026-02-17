@@ -1,17 +1,17 @@
 <header>
         <div id="logo">
-                <h1>PORCODDIO</h1>      <!-- Nome Sito DA CAMBIAREEEEEEEEEEEEEEEE!!!!!!!!!!!!-->
+                <h1>「 ✦ MEMELANDIA ✦ 」</h1>      <!-- Nome Sito DA CAMBIAREEEEEEEEEEEEEEEE!!!!!!!!!!!!-->
         </div>
 
         <div id="searchbar">    <!-- Sezione della barra di ricerca in alto -->
 
                 <button id="searchicon">        <!-- Bottone per cercare -->
-                        <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg">
-                                <image width="25" height="25" href="images/searchicon.svg"/>
+                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                                <image width="35" height="35" href="images/searchicon.svg"/>
                         </svg>
                 </button>
 
-                <input type="text" autocomplete="off" id="searchvalue" placeholder="Cerca..."/> <!-- Area di testo per la ricerca -->
+                <input type="text" autocomplete="off" id="searchvalue" placeholder="Cerca per tag e nome profilo..."/> <!-- Area di testo per la ricerca -->
         </div>
 
         <?php 

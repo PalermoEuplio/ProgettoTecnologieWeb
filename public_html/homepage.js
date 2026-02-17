@@ -1,6 +1,7 @@
 //              ----- Script necessario al funzionamento della pagina -----
 
 window.onload = function() {
+        
         async function send_post() {    // Funzione d'invio del post rapido
 
                 const textElement = document.getElementById('fastmsg'); // Prendo il riferimento all'area di testo ed elimino eventuali spazi superflui

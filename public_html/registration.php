@@ -38,10 +38,11 @@
                                                         <svg width="43" height="35" viewBox="0 0 32 32">
                                                                 <image width="32" height="32" href="images/dragAndDropIcon.svg" style="opacity: 0.5;"/> <!-- Icona Standard -->
                                                         </svg>
+                                                        <p>Trascina qui la tua foto profilo!</p>
 
                                                 </div>
                                                 <input id="fileInput" type="file" name="pfp" style="display: none;" accept="image/*"></input>   <!-- Input per permettere di cliccare per aggiungere la foto--> 
-                                                <p>Trascina qui la tua foto profilo!</p>
+                                                
                                         </div>
 
                                 </div>
@@ -75,12 +76,11 @@
 
                         </form>
 
-                        <form id="back" action="login.php">     <!-- Form con pulsante per tornare Indietro alla pagina del login -->
-                            <input type="submit" name="Registrati" value="Annulla"/>
-                        </form>
+                        <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
+                        
                 </div>
                 
-                <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
+                
 
 
                 <!--    Inizio della sezione di script per funzionamento della pagina      -->
