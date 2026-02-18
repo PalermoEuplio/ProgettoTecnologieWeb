@@ -277,7 +277,14 @@ aside {
 }
 
 .description.long {
-        grid-row: span 2;
+        grid-column: 1; 
+        grid-row: 2;
+        max-width: 90%;
+        margin: 10px;
+
+        background-color: #fff;
+        padding: 1.5em; 
+        border: 2px solid #ddd;
 }
 .comment {
         border: 5px ridge rgb(255, 152, 68);
