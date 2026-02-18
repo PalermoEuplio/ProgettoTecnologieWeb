@@ -19,7 +19,7 @@
                         <div class="description <?php echo !$hasImage ? 'long' : ''; ?>">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
                                                                                                 (Se non c'è immagine occupa due colonne della griglia di container-post, altrimenti una)-->
 
-                                <?php echo "Descrizione:<br>", $row['description']; ?>  <!-- Caricamento della descrizione dal database -->
+                                <p><?php echo $row['description']; ?></p>  <!-- Caricamento della descrizione dal database -->
 
                         </div>
 

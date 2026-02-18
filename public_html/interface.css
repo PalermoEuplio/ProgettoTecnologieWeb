@@ -201,6 +201,7 @@ aside {
         align-items: center;
         width: 74.9%;
         overflow-y: auto;
+        overflow-x: hidden;
         min-height: calc(100vh - 6.7rem); 
         align-items: left;
         justify-content: left;
@@ -209,18 +210,7 @@ aside {
 }
 
 .main.loggato{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 74.9%;
         top: 5em;
-        overflow-y: auto;
-        min-height: calc(100vh - 6.7rem); 
-        align-items: left;
-        justify-content: left;
-        background-color: #44444442;
-        margin-top: 5em;
 }
 
 
@@ -264,8 +254,16 @@ aside {
         max-height: 10em;
         overflow-y: auto;
         border-radius: 10px;
-        padding: 0.5em;
+        padding: 0 0.5rem;
+        word-wrap: break-word;
+        font-size: 16;
 }
+
+.description>p {
+        text-wrap: wrap;
+        margin-top: 0.5rem;
+}
+
 .description.long {
         grid-row: span 2;
 }
