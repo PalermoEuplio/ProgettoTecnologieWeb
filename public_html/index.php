@@ -17,7 +17,8 @@
                 <?php include 'interface.php'?>
                 <!--                            Inizio della parte centrale del sito                           -->
 
-                <div id="main"> <!-- Contenitore della zona centrale dei post (content) e del footer -->
+
+                <div class="main <?php echo isset($_SESSION['username']) ? 'loggato' : ''; ?>"> <!-- Contenitore della zona centrale dei post (content) e del footer -->
 
                         <div id="content">      <!-- Contenitore dei post presenti nel database -->
                                 <?php include 'posts.php'; ?>

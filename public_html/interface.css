@@ -194,23 +194,37 @@ aside {
 
 /*Parte dei Post*/
 
-#main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 74.8%;
-    top: 5em;
-    overflow-y: auto;
-    min-height: calc(100vh - 6.7rem); 
-    align-items: left;
-    justify-content: left;
-    background-color: #44444442;
-    margin-top: 5em;
+.main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 74.9%;
+        overflow-y: auto;
+        min-height: calc(100vh - 6.7rem); 
+        align-items: left;
+        justify-content: left;
+        background-color: #44444442;
+        margin-top: 5em;
+}
+
+.main.loggato{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 74.9%;
+        top: 5em;
+        overflow-y: auto;
+        min-height: calc(100vh - 6.7rem); 
+        align-items: left;
+        justify-content: left;
+        background-color: #44444442;
+        margin-top: 5em;
 }
 
 
-#main>#content {
+#content {
         align-items: center;
         justify-content: center;
         margin: 0 auto;
