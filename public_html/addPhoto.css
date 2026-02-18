@@ -2,7 +2,9 @@ html{
         font-weight: bold;
 }
 
-
+body{
+        background-color: #f38e77;
+}
 body>div {
         position: fixed;
         width: 100%;
@@ -10,7 +12,6 @@ body>div {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -22,7 +23,7 @@ body>div {
         width: 50rem;
         height: 35rem;
         border-style: solid black 2px;
-        background:#e9803e;
+        background:#f8c8bd;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         padding: 1em 0;
         border-radius: 2em;
@@ -41,18 +42,19 @@ body>div {
         width: 80%;
         cursor: pointer;
         height: 5em;
-        background-color: rgb(116, 239, 107);
+        background-color: rgb(140, 245, 111);;
         border-radius: 10px;
         border-style: 2px solid;
-        border-color: #494949;
+        border-color: rgb(91, 88, 88);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 #postform>button:hover{
-        background-color: rgba(116, 239, 107, 0.688) ;
+        background-color: rgba(110, 243, 73, 0.688) ;
 }
 
 #postform>p {
         margin-bottom: 0.1em;
-        color: #888;
+        color: #FCEBE8;
 }
 
 #postform>input[type="text"] {
@@ -103,7 +105,7 @@ body>div {
     margin-left: 1em;
     width: 90%;
     height: 90%;
-    background-color: cornsilk;
+    background-color: fff;
     text-align: justify;
     border-color: darkgray;
     border-radius: 15px;
@@ -115,7 +117,7 @@ body>div {
         margin-left: 1em;
         width: 90%;
         height: 90%;
-        background-color: cornsilk;
+        background-color: fff;
         text-align: justify;
         border-color: darkgray;
         border-radius: 15px;
