@@ -51,17 +51,17 @@
 
                                         <h1>Inserisci Dati</h1>
 
-                                        <p>* Username: </p>
+                                        <p>Username: </p>
                                         <label for="username">  <!-- Area Username -->
                                                 <input type="text" name="username" required></input>    
                                         </label>
 
-                                        <p>* Password: </p>
+                                        <p>Password: </p>
                                         <label for="password">  <!-- Area Password -->
                                                 <input type="password" name="password" required></input>
                                         </label>
 
-                                        <p>* Conferma Password: </p>
+                                        <p>Conferma Password: </p>
                                         <label for="password">  <!-- Area Conferma Password -->
                                                 <input type="password" name="repassword" required></input>
                                         </label>
