@@ -24,7 +24,7 @@
 <html>
         <head>
                 <meta encoding="utf-8"/>
-                <title>Fai un Post</title>
+                <title>Creazione Post</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <link rel="stylesheet" type="text/css" href="addPhoto.css"/>
         </head>
@@ -33,11 +33,11 @@
                     <div id="post" class="panel">       <!-- Div centrale della pagina -->
                             <form id="postform" action="post-manager.php" method="POST" enctype="multipart/form-data">  <!-- Form d'inserimento dei dati -->
 
-                                    <h1>Condividi i tuoi Meme</h1>  
+                                    <h1>Condividi il tuo meme</h1>  
 
                                     <div id="input">
-                                        <p>Aggiungi una foto: </p>
-                                        <p>* Descrizione: </p>
+                                        <p>Aggiungi una foto</p>
+                                        <p>*Descrizione</p>
 
                                         <div id="dropzone">     <!-- Sezione per il Dropzone -->
                                                 <div id="preview-container">    <!-- Container che serve per la visualizzazione dell'anteprima dell'immagine -->
@@ -51,7 +51,7 @@
 
                                         <textarea id="description" name="description" ></textarea>      <!-- Text Area Descrizione -->
 
-                                        <p>* Aggiungi dei Tag (Separati da virgola):</p>
+                                        <p>*Aggiungi dei tag (separati da virgola)</p>
                                         <textarea id="tag" name="tag"></textarea>       <!-- Text Area Tag-->
 
                                         <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>"> <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
@@ -59,7 +59,7 @@
                                         </p>
                                     </div>
                                     
-                                    <button>Carica Post</button>        <!-- Pulsante d'invio del form -->
+                                    <button id="caricapost">Carica Post</button>        <!-- Pulsante d'invio del form -->
                             </form>
                     </div>
                 </div>
