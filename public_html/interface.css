@@ -13,7 +13,8 @@ header {
         z-index: 3;
         position: fixed;
         width: 100%;
-        height: 5rem;
+        font-size: 10;
+        height: 5em;
         border-bottom-style: solid;
         box-shadow: rgba(0, 0, 0, 0.338) 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
         background-color: #333333;
@@ -27,7 +28,7 @@ aside {
         height: 100%;
         width: 25%;
         right: 0;
-        top: 4.2rem;
+        top: 3.3rem;
         border-left-style: solid;
         background-color: #48e5c2;
 }
@@ -39,24 +40,24 @@ aside {
 }
 
 #bg{
-        width: 200px;
-        height: 60px;
+        width: 170px;
+        height: 30px;
         cursor: pointer;
+        margin-bottom: 10px;
 }
 
 #searchbar {
         position: absolute;
         display: flex;
-        top: 20%;
         width: 40%;
 }
 
 #searchbar>input[type="text"] {
-        height: 1.9em;
+        height: 2.5em;
         width: 200%;
         box-shadow: black 0px 3px 10px -2px;
         text-decoration: wavy;
-        font-size: 25;
+        font-size: 15;
         border-radius: 15px;
 }
 
@@ -66,7 +67,7 @@ aside {
         border: 1px solid darkgray;
         position: absolute;
         right: 0.5em;
-        top: 3px;
+        top: 2px;
         padding: 0.1em;
         cursor: pointer;
 
@@ -89,11 +90,10 @@ aside {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    top: 5.2rem;
+    top: 3.3rem;
     height: 3rem;
-    width: 73.2%;
+    width: 74.8%;
     gap: 1rem;
-    padding: 1rem;
     border-bottom: 1px solid black;
     background-color: #FCEAE6;
     /*box-shadow: black 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;*/
@@ -107,6 +107,7 @@ aside {
 }
 
 #userform{
+        padding-left: 0.6rem;
         position:relative;
         z-index: 1;
 }
@@ -118,12 +119,13 @@ aside {
 
 #photoform {
         padding-top: 1rem;
+        margin-right: 1rem;
 }
 
 #user>#userform>#userIcon {
         z-index: 1;
-        width: 55;
-        height: 55;
+        width: 37;
+        height: 37;
         border-radius: 50%;
         border: 1px solid #2B5275;
         flex-shrink: 0;
@@ -158,20 +160,21 @@ aside {
 
 #user>#fastmsgform>#fastmsg{
         width: 70%;
-        height: 40;
+        height: 35;
         border-radius: 15px;
         border: 2px solid black;
         text-align: center;
-        padding-top: 11px;
+        padding-top: 9px;
         margin-left: 15%;
+        margin-right: 2em;
         background-color: #91979d81;
         box-shadow: black 0px 3px 10px -2px;
         resize: none;        
 }
 
 #user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
-        width: 55;
-        height: 55;
+        width: 35;
+        height: 35;
         border-radius: 30%;
         background-color:rgba(0, 0, 0, 0.175);
         border: 1px solid #2B5275;
@@ -206,13 +209,12 @@ aside {
         align-items: left;
         justify-content: left;
         background-color: #44444442;
-        margin-top: 5em;
+        top: 3.3em;
 }
 
 .main.loggato{
-        top: 5em;
+        top: 6.3em;
 }
-
 
 #content {
         align-items: center;
