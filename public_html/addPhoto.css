@@ -5,6 +5,7 @@ html{
 body{
         background-color: #f38e77;
 }
+
 body>div {
         position: fixed;
         width: 100%;
