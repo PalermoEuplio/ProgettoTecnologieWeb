@@ -16,6 +16,10 @@
 
                 <div class="container-post" data-id-post="<?php echo $row['id_post']; ?>">      <!-- Container dei singoli post (Viene creato Iterativamente)-->
 
+                        <div class="autore">    <!-- Autore del post -->
+                                <h1><?=$row['creator'] ?></h1>
+                        </div>
+
                         <div class="description <?php echo !$hasImage ? 'long' : ''; ?>">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
                                                                                                 (Se non c'è immagine occupa due colonne della griglia di container-post, altrimenti una)-->
 
