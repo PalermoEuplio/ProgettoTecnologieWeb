@@ -51,7 +51,7 @@
 
                 <textarea id="fastmsg" class="barstyle" type="text" autocomplete="off" placeholder="A Cosa stai Pensando?..."></textarea>       <!-- TextArea contenente la descirizione del post -->
                         
-                <button id="sendMessege" onclick="send_post()"> <!-- Bottone necessario all'invio del post rapido -->
+                <button id="sendMessege" onclick="send_post()" title="Pubblica messaggio"> <!-- Bottone necessario all'invio del post rapido -->
 
                         <svg width="30" height="30">
                                 <image width="30" height="30" href="images/sendMessageIcon.svg"/>       <!-- Immagine Bottone: Freccia di invio -->
@@ -62,7 +62,7 @@
         </div>
         <form id="photoform"action="addPhoto.php">      <!-- Contenitore del bottone di aggiunta post completo -->
 
-                <button id="addPhoto">
+                <button id="addPhoto" title="Pubblica un post">
 
                         <svg width="30" height="30" >
                                 <image width="30" height="30" href="images/addPictureIcon.svg"/>        <!-- Immagine Bottone: +Foto -->

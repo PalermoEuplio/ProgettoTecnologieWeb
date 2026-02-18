@@ -81,7 +81,7 @@ aside {
 }
 
 
-/*Parte centrale dell'utente*/
+/*Barra interazione utente*/
 
 #user {
     position: fixed;
@@ -89,14 +89,14 @@ aside {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    top: 4.2rem;
-    height: 1rem;
-    width: 72.3%;
+    top: 5.2rem;
+    height: 3rem;
+    width: 73.2%;
     gap: 1rem;
     padding: 1rem;
     border-bottom: 1px solid black;
-    background-color: white;
-    box-shadow: black 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
+    background-color: #FCEAE6;
+    /*box-shadow: black 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;*/
 }
 
 
@@ -122,8 +122,8 @@ aside {
 
 #user>#userform>#userIcon {
         z-index: 1;
-        width: 40;
-        height: 40;
+        width: 55;
+        height: 55;
         border-radius: 50%;
         border: 1px solid #2B5275;
         flex-shrink: 0;
@@ -170,17 +170,14 @@ aside {
 }
 
 #user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
-        width: 40;
-        height: 40;
-        border-radius: 50%;
+        width: 55;
+        height: 55;
+        border-radius: 30%;
         background-color:rgba(0, 0, 0, 0.175);
         border: 1px solid #2B5275;
         flex-shrink: 0;
 }
 #user>#fastmsgform>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
-        width: 40;
-        height: 40;
-        border-radius: 50%;
         border: 1px solid black;
         box-shadow: #3C3F42 0px 0px 20px -1px;
         flex-shrink: 0;
@@ -203,12 +200,13 @@ aside {
     flex-direction: column;
     align-items: center;
     width: 74.8%;
-    top: 4.2rem;
+    top: 5em;
     overflow-y: auto;
     min-height: calc(100vh - 6.7rem); 
     align-items: left;
     justify-content: left;
     background-color: #44444442;
+    margin-top: 5em;
 }
 
 
