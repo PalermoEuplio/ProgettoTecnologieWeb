@@ -11,7 +11,7 @@
                 <meta encoding="utf-8">
                 <link rel="stylesheet" type="text/css" href="interface.css">
                 <link rel="stylesheet" type="text/css" href="footer.css">
-                <script language="javascript"src="homepage.js"></script>
+                <script type="text/javascript" src="homepage.js"></script>
         </head>
         <body>
                 <?php include 'interface.php'?>

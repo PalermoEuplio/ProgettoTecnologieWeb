@@ -238,7 +238,13 @@ aside {
 }
 
 .autore{
-        grid-row: 1;
+        display: flex;
+        align-items: center;
+}
+
+.autore>p {
+        margin-left: 0.4rem;
+        font-size: 18px;
 }
 
 .post /*spazio dove andrà la foto */ {
@@ -371,4 +377,10 @@ aside {
     
     margin-top: 2%;
     margin-bottom: 2%;  
+}
+
+.pfp {
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
 }

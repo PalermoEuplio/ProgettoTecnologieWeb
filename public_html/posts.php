@@ -13,11 +13,15 @@
 
                 $hasImage = !empty($row['image']);      // Primo controllo necessario per capire se il post contiene un'immagine o meno
 ?>
-
+                <?php // Ottengo l'immagine di profilo dal database
+                        $creator = $row['creator'];
+                        $pfp = pg_fetch_result(pg_query($db, "SELECT pfp FROM utente WHERE username='$creator' LIMIT 1;"), 0, 0);
+                ?>
                 <div class="container-post" data-id-post="<?php echo $row['id_post']; ?>">      <!-- Container dei singoli post (Viene creato Iterativamente)-->
 
                         <div class="autore">    <!-- Autore del post -->
-                                <h1>Post di: <?=$row['creator'] ?></h1>
+                                <img class="pfp" src="<?=$pfp?>"></img>
+                                <p><?=$row['creator'] ?></p>
                         </div>
 
                         <div class="description <?php echo !$hasImage ? 'long' : ''; ?>">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
