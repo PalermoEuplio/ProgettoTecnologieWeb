@@ -24,7 +24,7 @@
                                 <p><?=$row['creator'] ?></p>
                         </div>
 
-                        <div class="description <?php echo !$hasImage ? 'long' : ''; ?>">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
+                        <div class="description">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
                                                                                                 (Se non c'è immagine occupa due colonne della griglia di container-post, altrimenti una)-->
 
                                 <p><?php echo $row['description']; ?></p>  <!-- Caricamento della descrizione dal database -->
@@ -41,9 +41,7 @@
 
                         <?php endif; ?> <!-- Termine dell'if precedente -->
 
-                        <div class="comment <?php echo !$hasImage ? 'short' : ''; ?>">  <!-- Contenitore dei commenti relativi al post -->
-
-                                <strong style="position: absolute; left: 50%; transform: translateX(-50%); padding-top:4px;">Commenti</strong><br>      <!-- Intestazione -->
+                        <div class="comment">  <!-- Contenitore dei commenti relativi al post -->
 
                                 <?php
 
@@ -59,8 +57,8 @@
                                                         $autore = htmlspecialchars($c[0]);      //Salvo autore del commento e relativo testo 
                                                         $testo = htmlspecialchars($c[1]);
 
-                                                        echo "<li style='margin-bottom: 8px;'>";        // VIsualizzazione del contenuto dei commenti
-                                                        echo "  <b style='color: #48e5c2;'>{$autore}:</b> ";
+                                                        echo "<li>";        // VIsualizzazione del contenuto dei commenti
+                                                        echo "  <b>{$autore}:</b> ";
                                                         echo "  <span>{$testo}</span>";
                                                         echo "</li>";
                                                         
@@ -74,29 +72,38 @@
 
                                         }
                                 ?>
-                                <?php
-                                        // Sezione necessaria all'aggunta di nuovi commenti ai post
-                                        if(isset($_SESSION['username'])):      // Verifico di trovarmi in una sessione con utente loggato
-
-                                ?>
-                                        <div id="fastcomment">  <!-- Contenitore degli elementi necessari all'aggiunta del nuovo commento -->
-
-                                                <!-- Area per il testo -->
-                                                <textarea class="textcomment" class="barstyle" type="text" autocomplete="off" placeholder="Commenta.."></textarea>
-
-                                                <button id="sendComment" onclick="send_comment(this)">  <!-- Bottone per l'invio del commento -->
-
-                                                        <svg width="27" height="34" viewBox="0 0 27 27">
-                                                                <image width="27" height="27" href="images/sendMessageIcon.svg"/>       <!-- Immagine Bottone: Freccia di invio -->
-                                                        </svg>
-
-                                                </button>
-                                        </div>
-
-                                <?php
-                                        endif;
-                                ?>
+                                
                         </div>
+                        <?php
+                                // Sezione necessaria all'aggunta di nuovi commenti ai post
+                                if(isset($_SESSION['username'])):      // Verifico di trovarmi in una sessione con utente loggato
+
+                        ?>
+                                <div class="fastcomment">  <!-- Contenitore degli elementi necessari all'aggiunta del nuovo commento -->
+
+                                        <!-- Area per il testo -->
+                                        <textarea class="textcomment" class="barstyle" type="text" autocomplete="off" placeholder="Commenta.."></textarea>
+
+                                        <button class="sendComment" onclick="send_comment(this)">  <!-- Bottone per l'invio del commento -->
+
+                                                <svg width="27" height="34" viewBox="0 0 27 27">
+                                                        <image width="27" height="27" href="images/sendMessageIcon.svg"/>       <!-- Immagine Bottone: Freccia di invio -->
+                                                </svg>
+
+                                        </button>
+
+                                        <button class="sendLike" onclick="send_like(this)">  <!-- Bottone per l'invio del like -->
+
+                                                <svg width="27" height="34" viewBox="0 0 27 27">
+                                                        <image width="27" height="27" href="images/like.svg"/>       <!-- Immagine Bottone: Pollice in Su -->
+                                                </svg>
+
+                                        </button>
+                                </div>
+
+                        <?php
+                                endif;
+                        ?>
                 </div>
 
                                 <!-- Sezione necessaria all'eliminazione del post da parte dell'utente che lo ha creato 

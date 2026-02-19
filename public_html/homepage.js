@@ -7,37 +7,31 @@
 
                 if (message === "") return; // Termino l'esecuzione se il testo è vuoto
 
-                let send_confirm = confirm("Sei sicuro di voler postare il messaggio ?");        // Richiesta di conferma per l'utente mediante confirm del browser
+                const formData = new FormData();        // Preparo il messaggio per inviare la descrizione del post con id f_description
+                formData.append('f_description', message);
 
-                if (send_confirm) {     // Verifico l'ok dell'utente
+                try {
+                        
+                        const response = await fetch('post-manager.php', {      // Invio i dati al post-manager
+                                method: 'POST',
+                                body: formData
+                        });
 
-                        const formData = new FormData();        // Preparo il messaggio per inviare la descrizione del post con id f_description
-                        formData.append('f_description', message);
+                        const result = await response.json();   // Aspetto la risposta dal post-manager
 
-                        try {
+                        if (result.success) {
                                 
-                                const response = await fetch('post-manager.php', {      // Invio i dati al post-manager
-                                        method: 'POST',
-                                        body: formData
-                                });
+                                window.location.reload();       // Se il server dice OK, aggiorno la pagina per vedere i post
 
-                                const result = await response.json();   // Aspetto la risposta dal post-manager
+                        } else {
 
-                                if (result.success) {
-                                        
-                                        window.location.reload();       // Se il server dice OK, aggiorno la pagina per vedere i post
+                                alert("Errore durante il salvataggio: " + result.error);
 
-                                } else {
-
-                                        alert("Errore durante il salvataggio: " + result.error);
-
-                                }
-                        } catch (error) {
-                                console.error("Errore di rete:", error);
-                                alert("Errore di connessione al server.");
                         }
+                } catch (error) {
+                        console.error("Errore di rete:", error);
+                        alert("Errore di connessione al server.");
                 }
-
         }
 
 
@@ -51,34 +45,29 @@
 
                 if (message === "") return; // Termino l'esecuzione se il testo è vuoto
 
-                let send_confirm = confirm("Sei sicuro di voler postare il Commento?"); // Richiesta di conferma per l'utente mediante confirm del browser
+                const formData = new FormData();        // Preparo il messaggio per inviare il commento e l'id del post con relativi id comment e id_post
+                formData.append('comment', message);
+                formData.append('id_post', idpost);
 
-                if (send_confirm) {     // Verifico l'ok dell'utente
+                try {
+                        
+                        const response = await fetch('post-manager.php', {      // Invio i dati al post-manager
+                                method: 'POST',
+                                body: formData
+                        });
 
-                        const formData = new FormData();        // Preparo il messaggio per inviare il commento e l'id del post con relativi id comment e id_post
-                        formData.append('comment', message);
-                        formData.append('id_post', idpost);
+                        const result = await response.json();   // Aspetto la risposta dal post-manager
 
-                        try {
+                        if (result.success) {
                                 
-                                const response = await fetch('post-manager.php', {      // Invio i dati al post-manager
-                                        method: 'POST',
-                                        body: formData
-                                });
+                                window.location.reload();       // Se il server dice OK, aggiorno la pagina per vedere il post aggiornato
 
-                                const result = await response.json();   // Aspetto la risposta dal post-manager
-
-                                if (result.success) {
-                                        
-                                        window.location.reload();       // Se il server dice OK, aggiorno la pagina per vedere il post aggiornato
-
-                                } else {
-                                        alert("Errore durante il salvataggio: " + result.error);
-                                }
-                        } catch (error) {
-                                console.error("Errore di rete:", error);
-                                alert("Errore di connessione al server.");
+                        } else {
+                                alert("Errore durante il salvataggio: " + result.error);
                         }
+                } catch (error) {
+                        console.error("Errore di rete:", error);
+                        alert("Errore di connessione al server.");
                 }
 
         }

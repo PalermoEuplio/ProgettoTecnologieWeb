@@ -235,6 +235,7 @@ aside {
         justify-content: left;
         padding-bottom: 0.5em;
         padding-top: 0.5em;
+        gap: 0.3rem;
 }
 
 .autore{
@@ -250,8 +251,6 @@ aside {
 .post /*spazio dove andrà la foto */ {
         height: 30em;
         overflow: hidden;
-        margin-bottom: 5px;
-        margin-top: 5px;
         border-radius: 10px;
         background-color: #fff;
         padding: 1.5em; 
@@ -280,65 +279,58 @@ aside {
         margin-top: 0.5rem;
 }
 
-.description.long {
-        grid-column: 1; 
-        grid-row: 2;
-        max-width: 90%;
-        max-height: 80%;
-        margin: 10px;
-        margin-top: 0.5rem;
-
-        background-color: #fff;
-        padding: 1em; 
-        border: 2px solid #ddd;
-}
 .comment {
         position:static;
         display: flex;
         flex-direction: column;
 
         min-height: 10em;
-        max-height: 35em;
+        max-height: 15em;
         overflow-y: scroll;
         overflow-wrap: break-word;
-
-        margin: 1rem 0;
-
         background-color: #fff;
-        padding: 0.8em; 
+        padding: 0.4em; 
 
-        border: 4px solid #ddd;
+        border: 2px solid #ddd;
         border-radius: 10px;
 }
-.comment.short {
-        height: 10em;
-        margin-top: 5px;
-        margin-bottom: 5px;
+
+.comment>ul {
+        margin-bottom: 1em;
+        margin-top: 0;
 }
 
-#fastcomment /*area per inserimento commento */ {
+.comment>ul>li {
+        margin-top: 0.3em;
+}
+
+.fastcomment /*area per inserimento commento */ {
+
         display: flex;
+        padding: 0em 1em;
         align-items: center;
         border-radius: 10px;
-        width: 100%;
+        width: 95%;
         box-shadow: black 0px 3px 10px -2px;
         background: rgba(245, 245, 245, 0.74);
+        gap: 1em;
 }
-#fastcomment>.textcomment /*textarea per aggiungere il commento */ {
-        margin-right: 8px;
+.textcomment /*textarea per aggiungere il commento */ {
         resize: none;
         border-radius: 10px;
-        width: 90%;
+        margin: 0.3rem 0;
+        width: 85%;
         height: 5em;
 }
 
-#fastcomment>#sendComment /*tasto di invio del commento */ {
+.sendComment, .sendLike /*tasto di invio del commento e like */ {
         width: 40px;
         height: 40px;
         border-radius: 10px;
+        border-color: #ba3321;
 }
 
-#fastcomment>#sendComment img {
+.sendComment>img, .like>img {
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -354,7 +346,7 @@ aside {
         background: transparent;
         margin-bottom: 2px;
 }
-.deletepost img {
+.deletepost>img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -377,5 +369,6 @@ aside {
         width: 50px;
         height: 50px;
         border-radius: 30px;
+        border-color: #ba3321;
         object-fit: cover;
 }
