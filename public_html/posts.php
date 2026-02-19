@@ -14,8 +14,8 @@
                 $hasImage = !empty($row['image']);      // Primo controllo necessario per capire se il post contiene un'immagine o meno
 ?>
                 <?php // Ottengo l'immagine di profilo dal database
-                        $creator = $row['creator'];
-                        $pfp = pg_fetch_result(pg_query($db, "SELECT pfp FROM utente WHERE username='$creator' LIMIT 1;"), 0, 0);
+                        $escaped_creator = addslashes($row['creator']);
+                        $pfp = pg_fetch_result(pg_query($db, "SELECT pfp FROM utente WHERE username='$escaped_creator' LIMIT 1;"), 0, 0);
                 ?>
                 <div class="container-post" data-id-post="<?php echo $row['id_post']; ?>">      <!-- Container dei singoli post (Viene creato Iterativamente)-->
 
