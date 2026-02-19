@@ -15,7 +15,7 @@
 ?>
                 <?php // Ottengo l'immagine di profilo dal database
                         $escaped_creator = addslashes($row['creator']);
-                        $pfp = pg_fetch_result(pg_query($db, "SELECT pfp FROM utente WHERE username='$escaped_creator' LIMIT 1;"), 0, 0);
+                        $pfp = pg_fetch_result(pg_query($db, "SELECT pfp FROM utente WHERE username=E'$escaped_creator' LIMIT 1;"), 0, 0);
                 ?>
                 <div class="container-post" data-id-post="<?php echo $row['id_post']; ?>">      <!-- Container dei singoli post (Viene creato Iterativamente)-->
 
