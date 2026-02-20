@@ -59,7 +59,7 @@ aside {
         text-decoration: wavy;
         font-size: 22;
         border-radius: 15px;
-        font-family: "Jersey 15", sans-serif;
+        font-family: "Jersey 25", sans-serif;
 }
 
 #searchbar>#searchicon {
@@ -162,31 +162,39 @@ aside {
 
 
 #user>#fastmsgform>#fastmsg{
-        width: 70%;
-        height: 35;
+        width: 90%;
+        height: 45;
         border-radius: 15px;
         border: 2px solid black;
         text-align: center;
-        padding-top: 9px;
-        margin-left: 15%;
+        margin-left: 1em;
         margin-right: 2em;
         background-color: #91979d81;
         box-shadow: black 0px 3px 10px -2px;
         resize: none;
-        font-family: "Press Start 2P", system-ui;        
+        font-family: "Press Start 2P", system-ui; 
+        font-size: 18;   
+        padding-top: 0.8em; 
 }
 
-#user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
-        width: 35;
-        height: 35;
-        border-radius: 30%;
+#user>#sendMessege , #user>#photoform>#addPhoto {
+        box-sizing: border-box;
+        width: 10em;
+        height: 2.2em;
         background-color:rgba(0, 0, 0, 0.175);
-        border: 1px solid #2B5275;
-        flex-shrink: 0;
+        border: 2px solid #3c1010;
+        border-radius: 5px;
+        margin-right: 3em;
+        font-size: 22px;
+        font-family:"Jersey 25";
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 }
-#user>#fastmsgform>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
-        border: 1px solid black;
-        box-shadow: #3C3F42 0px 0px 20px -1px;
+
+#user>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
+        box-shadow: #271313 5px 3px 3px 3px;
         flex-shrink: 0;
         cursor: pointer;
 }
