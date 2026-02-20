@@ -46,7 +46,7 @@
 
                 }else{
 
-                    if(insert_utente($user, $pass,$pfp_path)){  // Chiamo la funzione d'inserimento utente nel database e ne verifico il valore di ritorno
+                    if(insert_utente($user, password_hash($pass, PASSWORD_BCRYPT),$pfp_path)){  // Chiamo la funzione d'inserimento utente nel database e ne verifico il valore di ritorno
 
                         $_SESSION['username']=$user;    // Se tutto è andato a buon fine faccio l'accesso cambiano il username della sessione e reinderizzo alla pagina principale
                         echo "<meta http-equiv='Refresh' content='0; URL=index.php'>";

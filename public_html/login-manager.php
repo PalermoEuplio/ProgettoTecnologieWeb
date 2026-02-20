@@ -14,11 +14,7 @@
             $pass = $_POST['password'];
 
 
-            $temp = get_pwd($user, $db);    // Carico la password relativa allo username inviato per farne il controllo
-
-            if(!$temp)  // Controllo il valore tornato dalla funzione e ne ricavo il relativo hash
-                $hash=false;
-            else $hash = password_hash($temp,PASSWORD_DEFAULT);
+            $hash = get_pwd($user, $db);    // Carico l'hash della password relativa all'username inviato per farne il controllo
 
             if($hash == false){     //Caso Utente non registrato in database
 
