@@ -241,6 +241,7 @@ aside {
 .autore{
         display: flex;
         align-items: center;
+        padding: 0.5em;
 }
 
 .autore>p {
@@ -340,11 +341,13 @@ aside {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 60px;
+        width: 50px;
         height: 50px; 
         cursor: pointer;
         background: transparent;
-        margin-bottom: 2px;
+        margin-left: auto;
+        border-radius: 10px;
+        border-color: #ba3321;
 }
 .deletepost>img {
         width: 100%;

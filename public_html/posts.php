@@ -22,6 +22,21 @@
                         <div class="autore">    <!-- Autore del post -->
                                 <img class="pfp" src="<?=$pfp?>"></img>
                                 <p><?=$row['creator'] ?></p>
+
+                                <!-- Sezione necessaria all'eliminazione del post da parte dell'utente che lo ha creato 
+                                (Viene Inserito a prescindere ad ogni iterazione e non fa parte della griglia di container-post) -->
+                                <?php
+                                        // Verifico di avere un utente loggato e che questo sia il creatore del post
+                                        if(isset($_SESSION['username']) && $_SESSION['username'] == $row['creator']) {
+                                ?>
+
+                                        <button class="deletepost" onclick="deletefunction(<?php echo $row['id_post']; ?>)">    <!-- Bottone per l'eliminazione -->
+                                                <img src="images/trash-can.svg" alt="Icona" width="20"> <!-- Immagine Bottone: Cestino -->
+                                        </button>
+
+                                <?php 
+                                        }
+                                ?>
                         </div>
 
                         <div class="description">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
@@ -104,22 +119,11 @@
                         <?php
                                 endif;
                         ?>
+
+                        
                 </div>
 
-                                <!-- Sezione necessaria all'eliminazione del post da parte dell'utente che lo ha creato 
-                                        (Viene Inserito a prescindere ad ogni iterazione e non fa parte della griglia di container-post) -->
-                <?php
-                        // Verifico di avere un utente loggato e che questo sia il creatore del post
-                        if(isset($_SESSION['username']) && $_SESSION['username'] == $row['creator']) {
-                ?>
-
-                        <button class="deletepost" onclick="deletefunction(<?php echo $row['id_post']; ?>)">    <!-- Bottone per l'eliminazione -->
-                                <img src="images/trash-can.svg" alt="Icona" width="20"> <!-- Immagine Bottone: Cestino -->
-                        </button>
-
-                <?php 
-                        }
-                ?>
+                
                 <div class="post-separator"></div>      <!-- Separatore grafico fra i post -->
 
 <?php 
