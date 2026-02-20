@@ -1,6 +1,6 @@
 <header>
         <div id="logo">
-                <h1>「 ✦ MEMELANDIA ✦ 」</h1>      <!-- Nome Sito DA CAMBIAREEEEEEEEEEEEEEEE!!!!!!!!!!!!-->
+                <h1>MEMELANDIA</h1>      <!-- Nome Sito DA CAMBIAREEEEEEEEEEEEEEEE!!!!!!!!!!!!-->
         </div>
 
         <div id="searchbar">    <!-- Sezione della barra di ricerca in alto -->

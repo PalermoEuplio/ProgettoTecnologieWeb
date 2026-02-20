@@ -14,7 +14,7 @@ header {
         position: fixed;
         width: 100%;
         font-size: 10;
-        height: 5em;
+        height: 7em;
         border-bottom-style: solid;
         box-shadow: rgba(0, 0, 0, 0.338) 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
         background-color: #280905;
@@ -75,10 +75,12 @@ aside {
 
 #logo {
         position: absolute;
-        left: 2rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        left: 5rem;
         color: #FCEBE8;
         font-style: oblique;
+        font-family: "Jersey 10";
+        font-size: 30;
+        letter-spacing: 2px;
 }
 
 
@@ -90,8 +92,8 @@ aside {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    top: 3.3rem;
-    height: 3rem;
+    top: 4.5rem;
+    height: 4rem;
     width: 84.8%;
     gap: 1rem;
     border-bottom: 1px solid black;

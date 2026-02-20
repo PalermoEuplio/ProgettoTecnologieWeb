@@ -12,6 +12,9 @@
                 <link rel="stylesheet" type="text/css" href="interface.css">
                 <link rel="stylesheet" type="text/css" href="footer.css">
                 <script type="text/javascript" src="homepage.js"></script>
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
         </head>
         <body>
                 <?php include 'interface.php'?>
