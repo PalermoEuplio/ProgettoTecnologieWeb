@@ -49,7 +49,7 @@
         </div>
         <div id="fastmsgform">  <!-- Contenitore della barra per il post rapido -->
 
-                <textarea id="fastmsg" class="barstyle" type="text" autocomplete="off" placeholder="A Cosa stai Pensando?..."></textarea>       <!-- TextArea contenente la descirizione del post -->
+                <textarea id="fastmsg" class="barstyle" type="text" autocomplete="off" placeholder="A cosa stai pensando...?"></textarea>       <!-- TextArea contenente la descirizione del post -->
                         
                 
         </div>

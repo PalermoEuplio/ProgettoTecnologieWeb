@@ -97,7 +97,7 @@
                                 <div class="fastcomment">  <!-- Contenitore degli elementi necessari all'aggiunta del nuovo commento -->
 
                                         <!-- Area per il testo -->
-                                        <textarea class="textcomment" class="barstyle" type="text" autocomplete="off" placeholder="Commenta.."></textarea>
+                                        <textarea class="textcomment" class="barstyle" type="text" autocomplete="off" placeholder="Scrivi qui per commentare..."></textarea>
 
                                         <button class="sendComment" onclick="send_comment(this)">  <!-- Bottone per l'invio del commento -->
 

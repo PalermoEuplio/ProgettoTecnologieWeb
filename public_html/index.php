@@ -10,6 +10,7 @@
         <head>
                 <title>Homepage</title>
                 <meta encoding="utf-8">
+                <meta name="google" content="notranslate"> <!-- Serve per non far uscire il popup di google traduttore nel browser -->
                 <link rel="stylesheet" type="text/css" href="interface.css">
                 <link rel="stylesheet" type="text/css" href="footer.css">
                 <script type="text/javascript" src="homepage.js"></script>
