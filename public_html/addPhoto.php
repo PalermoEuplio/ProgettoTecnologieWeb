@@ -27,6 +27,10 @@
                 <title>Creazione Post</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <link rel="stylesheet" type="text/css" href="addPhoto.css"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap" rel="stylesheet">
         </head>
         <body>
                 <div>
@@ -36,8 +40,8 @@
                                     <h1>Condividi il tuo meme</h1>  
 
                                     <div id="input">
-                                        <p>Aggiungi una foto</p>
-                                        <p>*Descrizione</p>
+                                        <p2>Aggiungi una foto</p2>
+                                        <p2>*Descrizione</p2>
 
                                         <div id="dropzone">     <!-- Sezione per il Dropzone -->
                                                 <div id="preview-container">    <!-- Container che serve per la visualizzazione dell'anteprima dell'immagine -->
@@ -51,7 +55,7 @@
 
                                         <textarea id="description" name="description" ></textarea>      <!-- Text Area Descrizione -->
 
-                                        <p>*Aggiungi dei tag (separati da virgola)</p>
+                                        <p3>*Aggiungi dei tag (separati da virgola)</p3>
                                         <textarea id="tag" name="tag"></textarea>       <!-- Text Area Tag-->
 
                                         <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>"> <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->

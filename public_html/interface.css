@@ -57,8 +57,9 @@ aside {
         width: 200%;
         box-shadow: black 0px 3px 10px -2px;
         text-decoration: wavy;
-        font-size: 15;
+        font-size: 22;
         border-radius: 15px;
+        font-family: "Jersey 15", sans-serif;
 }
 
 #searchbar>#searchicon {
@@ -67,7 +68,7 @@ aside {
         border: 1px solid darkgray;
         position: absolute;
         right: 0.5em;
-        top: 2px;
+        top: 0.5em;
         padding: 0.1em;
         cursor: pointer;
 
@@ -171,7 +172,8 @@ aside {
         margin-right: 2em;
         background-color: #91979d81;
         box-shadow: black 0px 3px 10px -2px;
-        resize: none;        
+        resize: none;
+        font-family: "Press Start 2P", system-ui;        
 }
 
 #user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
@@ -212,6 +214,7 @@ aside {
         justify-content: left;
         background-color: #f8c8bd;
         top: 3.3em;
+        margin-top: 1em;
 }
 
 .main.loggato{
@@ -248,7 +251,9 @@ aside {
 
 .autore>p {
         margin-left: 0.4rem;
-        font-size: 18px;
+        font-size: 20px;
+        font-family: "Press Start 2P", system-ui;
+        font-style:oblique;
 }
 
 .post /*spazio dove andrà la foto */ {
@@ -280,6 +285,7 @@ aside {
 .description>p {
         text-wrap: wrap;
         margin-top: 0.5rem;
+        font-family: "Funnel Display", sans-serif;
 }
 
 .comment {
@@ -296,6 +302,8 @@ aside {
 
         border: 2px solid #ddd;
         border-radius: 10px;
+        font-family: "Funnel Display", sans-serif;
+        
 }
 
 .comment>ul {
@@ -325,6 +333,8 @@ aside {
         margin-right: auto;
         width: 100%;
         height: 5em;
+        font-family: "Funnel Display", sans-serif;
+        font-size: 16;
 }
 
 .sendLike {
