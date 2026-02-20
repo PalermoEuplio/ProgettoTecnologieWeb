@@ -8,6 +8,7 @@
 ?>
 <html>
         <head>
+                <title>Homepage</title>
                 <meta encoding="utf-8">
                 <link rel="stylesheet" type="text/css" href="interface.css">
                 <link rel="stylesheet" type="text/css" href="footer.css">

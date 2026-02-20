@@ -21,7 +21,7 @@
 <html>
         <head>
                 <meta encoding="utf-8"/>
-                <title>Login</title>
+                <title>Registrazione</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <link rel="stylesheet" type="text/css" href="registration.css"/>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
