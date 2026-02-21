@@ -50,7 +50,7 @@
                         <div class="description">       <!-- Container della descrizione che cambia css in base a se il post ha immagine o meno 
                                                                                                 (Se non c'è immagine occupa due colonne della griglia di container-post, altrimenti una)-->
 
-                                <p><?php echo $row['description']; ?></p>  <!-- Caricamento della descrizione dal database -->
+                                <p><?php echo htmlspecialchars($row['description']); ?></p>  <!-- Caricamento della descrizione dal database -->
 
                         </div>
 
