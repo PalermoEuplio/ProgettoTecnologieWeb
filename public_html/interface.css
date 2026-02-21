@@ -327,9 +327,16 @@ aside {
 
 .sendLike {
         margin-right: 9px;
+        width: 70px;
+        height: 40px;
+        border-radius: 10px;
+        border-color: #ba3321;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 }
 
-.sendComment, .sendLike /*tasto di invio del commento e like */ {
+.sendComment /*tasto di invio del commento */ {
         width: 40px;
         height: 40px;
         border-radius: 10px;

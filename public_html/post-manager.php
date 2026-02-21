@@ -43,6 +43,57 @@
 
     }
 
+    else if(isset($_POST['action']) && $_POST['action'] === 'like' && isset($_POST['id_post'])) {
+
+        header('Content-Type: application/json');
+
+        if (!isset($_SESSION['username'])) {
+            echo json_encode(['success' => false]);
+            exit();
+        }
+
+        $id_post = $_POST['id_post'];
+        $username = $_SESSION['username'];
+
+        $check = pg_query_params(
+            $db,
+            "SELECT 1 FROM like_post WHERE id_post=$1 AND username=$2",
+            array($id_post, $username)
+        );
+
+        if (pg_num_rows($check) == 0) {
+
+            pg_query_params(
+                $db,
+                "INSERT INTO like_post (id_post, username) VALUES ($1,$2)",
+                array($id_post, $username)
+            );
+
+        } else {
+
+            pg_query_params(
+                $db,
+                "DELETE FROM like_post WHERE id_post=$1 AND username=$2",
+                array($id_post, $username)
+            );
+        }
+
+        $count = pg_query_params(
+            $db,
+            "SELECT COUNT(*) FROM like_post WHERE id_post=$1",
+            array($id_post)
+        );
+
+        $like_total = pg_fetch_result($count, 0, 0);
+
+        echo json_encode([
+            'success' => true,
+            'count' => $like_total
+        ]);
+
+        exit();
+    }
+
     else if(isset($_POST['f_description'])){     // Terzo controllo per i post rapidi con sola descrizione
 
         $desc = $_POST['f_description'];    // Preparo la descrizione del post

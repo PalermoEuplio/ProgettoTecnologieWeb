@@ -92,7 +92,7 @@
                         <?php
                                 // Sezione necessaria all'aggunta di nuovi commenti ai post
                                 if(isset($_SESSION['username'])):      // Verifico di trovarmi in una sessione con utente loggato
-
+                                        
                         ?>
                                 <div class="fastcomment">  <!-- Contenitore degli elementi necessari all'aggiunta del nuovo commento -->
 
@@ -107,13 +107,22 @@
 
                                         </button>
 
-                                        <button class="sendLike" onclick="send_like(this)">  <!-- Bottone per l'invio del like -->
+                                        <button class="sendLike" data-id="<?php echo $row['id_post']; ?>" onclick="send_like(this)">  <!-- Bottone per l'invio del like -->
 
                                                 <svg width="27" height="34" viewBox="0 0 27 27">
                                                         <image width="27" height="27" href="images/like.svg"/>       <!-- Immagine Bottone: Pollice in Su -->
                                                 </svg>
 
+                                                <div class="like-count">
+                                                        <?php
+                                                                $res = pg_query_params($db, "SELECT COUNT(*) FROM like_post WHERE id_post=$1", array($row['id_post']));
+                                                                echo pg_fetch_result($res, 0, 0);
+                                                        ?>
+                                                </div>
+
                                         </button>
+
+                                        
                                 </div>
 
                         <?php
