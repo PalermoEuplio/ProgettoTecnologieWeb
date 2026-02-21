@@ -145,7 +145,8 @@
         else{
             if(update_posts_creator($old_user, $new_user))   // Se l'aggiornamento dell'utente è andato a buon fine aggiorno anche il nome del creatore nei post vecchi
                 if(update_liketable($old_user, $new_user)){   // Se l'aggiornamento dei post è andato a buon fine aggiorno anche il nome utente nella like table
-                    return true;
+                    if(update_comments_username($old_user, $new_user))   // Se l'aggiornamento della like table è andato a buon fine aggiorno anche il nome utente nei commenti
+                        return true;
             }
             return false; 
         }
@@ -185,5 +186,30 @@
             }
             return true;
         }
+    }
+
+    function update_comments_username($old_user, $new_user) {
+        require "./db.php";
+
+        if ($old_user == $new_user) return true;    // Se il nome utente non è stato cambiato non c'è bisogno di aggiornare i commenti
+
+        //Scorro tutte le Occorrenze del vecchio user nei commenti e le sostituisco con il nuovo user usando regexp_replace
+        // \{' || $1 || ',',  Serve per la ricerca del carattere preciso nella matrice dei commenti
+        // 'g' Serve per sostituire tutte le occorrenze
+        $sql = "UPDATE post SET comments = regexp_replace(comments::text,
+                    '\{' || $1 || ',', 
+                    '{' || $2 || ',', 
+                    'g'
+                )::text[] 
+                WHERE comments::text LIKE '%{' || $1 || ',%';";
+
+        $prep = pg_prepare($db, "updateComments", $sql);
+        $ret = pg_execute($db, "updateComments", array($old_user, $new_user));
+
+        if (!$ret) {
+            error_log("Errore aggiornamento massivo commenti: " . pg_last_error($db));
+            return false;
+        }
+        return true;
     }
 ?>
