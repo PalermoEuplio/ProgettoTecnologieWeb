@@ -73,6 +73,7 @@ aside {
         font-size: 22;
         border-radius: 15px;
         font-family: "Jersey 25", sans-serif;
+        margin-top: 0.5em;
 }
 
 #searchicon {
@@ -81,7 +82,7 @@ aside {
         border: 1px solid darkgray;
         position: absolute;
         right: 0.5em;
-        top: 0.5em;
+        top: 1.3em;
         padding: 0.1em;
         cursor: pointer;
 
