@@ -110,9 +110,9 @@ aside {
 }
 
 #userform{
-        padding-left: 0.6rem;
-        position:relative;
-        z-index: 1;
+        right: 5rem;
+        position:absolute;
+        z-index: 100;
 }
 
 
@@ -125,7 +125,7 @@ aside {
         margin-right: 1rem;
 }
 
-#user>#userform>#userIcon {
+#userform>#userIcon {
         z-index: 1;
         width: 37;
         height: 37;
@@ -135,7 +135,7 @@ aside {
         background-color: white;
         object-fit: cover;
 }
-#user>#userform>#userIcon:hover {
+#userform>#userIcon:hover {
         padding: 0;
         border-radius: 50%;
         flex-shrink: 0;
@@ -148,6 +148,7 @@ aside {
         display: none;
         position: absolute;
         top:30px;
+        right:-20px;
         background-color: white; 
 
         padding: 10px;
