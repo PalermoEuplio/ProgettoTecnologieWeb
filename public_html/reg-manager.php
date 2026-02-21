@@ -146,10 +146,11 @@
             return false; 
         }
         else{
-            if(update_posts_creator($old_user, $new_user)){   // Se l'aggiornamento dell'utente è andato a buon fine aggiorno anche il nome del creatore nei post vecchi
-                return true;
+            if(update_posts_creator($old_user, $new_user))   // Se l'aggiornamento dell'utente è andato a buon fine aggiorno anche il nome del creatore nei post vecchi
+                if(update_liketable($old_user, $new_user)){   // Se l'aggiornamento dei post è andato a buon fine aggiorno anche il nome utente nella like table
+                    return true;
             }
-            return false;
+            return false; 
         }
     }
 
@@ -166,6 +167,23 @@
 
             if (!$ret) {    // Verifico il valore di ritorno della query
                 error_log("Errore aggiornamento creator post: " . pg_last_error($db));
+                return false;
+            }
+            return true;
+        }
+    }
+    function update_liketable($old_user, $new_user){
+
+        require "./db.php";
+
+        if($old_user == $new_user) {   // Se il nome utente non è stato cambiato non c'è bisogno di aggiornare la liketable
+            return true;
+        }else{
+            $sql = "UPDATE like_post SET username = $1 WHERE username = $2";
+            $prep = pg_prepare($db, "updateLikeTable", $sql);
+            $ret = pg_execute($db, "updateLikeTable", array($new_user, $old_user));
+            if(!$ret) {    // Verifico il valore di ritorno della query
+                error_log("Errore aggiornamento like table: " . pg_last_error($db));
                 return false;
             }
             return true;
