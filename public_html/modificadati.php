@@ -17,6 +17,8 @@
                 }
         }
 
+        session_start();    // Inizio la sessione
+
 ?>
 <html>
         <head>
@@ -50,24 +52,23 @@
                                                 </div>
 
                                         </div>
-
                                         <div id="regform">      <!-- Form d'inserimento dei dati -->
 
                                                 <h1>Modifica qui i tuoi dati</h1>
 
                                                 <p>*Username: </p>
                                                 <label for="username">  <!-- Area Username -->
-                                                        <input type="text" name="username" placeholder="vecchio username"></input>    
+                                                        <input type="text" name="username" placeholder="Vecchio Username" required></input>    
                                                 </label>
                 
                                                 <p>*Password: </p>
                                                 <label for="password">  <!-- Area Password -->
-                                                        <input type="password" name="password" placeholder="vecchia password"></input>
+                                                        <input type="password" name="password" placeholder="vecchia password" required></input>
                                                 </label>
 
                                                 <p>*Conferma Password: </p>
                                                 <label for="password">  <!-- Area Conferma Password -->
-                                                        <input type="password" name="repassword"></input>
+                                                        <input type="password" name="repassword" required></input>
                                                 </label>
 
                                                 
