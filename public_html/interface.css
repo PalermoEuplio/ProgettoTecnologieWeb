@@ -140,7 +140,7 @@ aside {
         width: 50;
         height: 50;
         border-radius: 50%;
-        border: 1px solid #325f86;
+        border: 2px solid #828282;
         flex-shrink: 0;
         background-color: white;
         object-fit: cover;
