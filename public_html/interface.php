@@ -4,14 +4,15 @@
         </div>
 
         <div id="searchbar">    <!-- Sezione della barra di ricerca in alto -->
+                <form action="index.php" method="GET">
+                        <button id="searchicon" type="submit">        <!-- Bottone per cercare -->
+                                <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                                        <image width="35" height="35" href="images/searchicon.svg"/>
+                                </svg>
+                        </button>
 
-                <button id="searchicon">        <!-- Bottone per cercare -->
-                        <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg">
-                                <image width="35" height="35" href="images/searchicon.svg"/>
-                        </svg>
-                </button>
-
-                <input type="text" autocomplete="off" id="searchvalue" placeholder="Cerca per tag e nome profilo..."/> <!-- Area di testo per la ricerca -->
+                        <input name="search" type="text" autocomplete="off" id="searchvalue" placeholder="Cerca per tag e nome profilo..."/> <!-- Area di testo per la ricerca -->
+                </form>
         </div>
 
         <?php

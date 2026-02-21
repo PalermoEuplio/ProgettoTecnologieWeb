@@ -61,7 +61,11 @@ aside {
         width: 40%;
 }
 
-#searchbar>input[type="text"] {
+#searchbar>form {
+        width: 50%;
+}
+
+#searchbar>form>input[type="text"] {
         height: 2.5em;
         width: 200%;
         box-shadow: black 0px 3px 10px -2px;
@@ -71,7 +75,7 @@ aside {
         font-family: "Jersey 25", sans-serif;
 }
 
-#searchbar>#searchicon {
+#searchicon {
         background-color: white;
         border-radius: 20px;
         border: 1px solid darkgray;
