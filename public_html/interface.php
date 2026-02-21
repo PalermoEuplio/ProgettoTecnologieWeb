@@ -39,7 +39,7 @@
                 if(isset($_SESSION['username']))  {      // Controllo necessario alla visualizzazione della barra sopra ai post relativa all'utente
                         ?>
                         <form action="modificadati.php">
-                                <button>
+                                <button title="Modifica dati utente">
                                         <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">     <!-- Sezione legata all'immagine dell'utente e che compare al passare del mouse su di essa -->
                                                 <img id="userIcon" src="<?= htmlspecialchars($pfp) ?>"/>        <!-- Immagine utente -->
                                         </div>
