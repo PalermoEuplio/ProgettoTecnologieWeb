@@ -3,8 +3,16 @@
 
         include "db.php";       // Connessione al database
 
-        $sqlpost = "SELECT id_post, image, description, array_to_json(tag) as 
-                tag_json, array_to_json(comments) as comments_json, creator FROM post ORDER BY id_post DESC;";  // Query necessaria al caricamento dei post
+        $escaped_search = addslashes($_GET['search']);
+
+        $sqlpost = "SELECT id_post, image, description, array_to_json(tag) as
+                tag_json, array_to_json(comments) as comments_json, creator FROM post WHERE 
+
+                        (LOWER(description) LIKE LOWER('%$escaped_search%')) OR
+                        (LOWER(array_to_string(tag, ',')) LIKE LOWER('%$escaped_search%')) OR
+                        (LOWER(creator) LIKE LOWER('%$escaped_search%'))
+                        ORDER BY id_post DESC ";  // Query necessaria al caricamento dei post
+
         pg_prepare($db, "loadpost", $sqlpost);
         $post = pg_execute($db, "loadpost", array());
 
