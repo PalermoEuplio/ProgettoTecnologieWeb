@@ -41,9 +41,18 @@ aside {
 
 #bg{
         width: 170px;
-        height: 30px;
+        height: 35px;
         cursor: pointer;
         margin-bottom: 10px;
+        margin-right: 7em;
+        border-radius: 5px;
+        font-family: "Press Start 2P", system-ui; 
+        font-size: 20;
+        background-color: rgba(130, 255, 88, 0.843);
+}
+
+#bg:hover{
+        background-color: rgb(130, 255, 88);
 }
 
 #searchbar {

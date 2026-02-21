@@ -112,4 +112,5 @@ body>div {
 body>footer{
         position: fixed;
         bottom: 0;
+        font-family: "Press Start 2P", system-ui;
 }
