@@ -72,6 +72,26 @@
 
         }
 
+        function send_like(button) {
+
+        const postId = button.dataset.id;   // Recupera id_post dal data-id del bottone
+
+        fetch("post-manager.php", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "action=like&id_post=" + postId
+        })
+        .then(response => response.json())
+        .then(data => {
+
+                if (!data.success) return;      // Se qualcosa fallisce, non aggiornare UI
+
+                const countSpan = button.parentElement.querySelector(".like-count");
+                countSpan.textContent = data.count;     // Aggiorna numero like
+        });
+        }
 
         async function deletefunction(idpost) { // Funzione che specifica il comportamento del bottone elimina. Prende come ingresso l'id del post da eliminare
 
