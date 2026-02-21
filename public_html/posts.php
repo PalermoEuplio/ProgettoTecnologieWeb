@@ -3,7 +3,7 @@
 
         include "db.php";       // Connessione al database
 
-        $escaped_search = addslashes($_GET['search']);
+        $escaped_search = addslashes($_GET['search'] ?? '');
 
         $sqlpost = "SELECT id_post, image, description, array_to_json(tag) as
                 tag_json, array_to_json(comments) as comments_json, creator FROM post WHERE 
