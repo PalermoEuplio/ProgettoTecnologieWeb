@@ -1,4 +1,4 @@
-<?php   
+<?php
 
         //      Sezione per la gestione del messaggio d'errore
 
@@ -6,16 +6,13 @@
         if(isset($_GET['err'])){
                 switch($_GET['err']){
                 case 1:
-                        $error_msg = "*Descrizione non Inserita";
+                        $error_msg = "*L'utente già registrato";
                         break;
                 case 2:
-                        $error_msg = "*Tag non Inseriti";
-                        break;
-                case 3:
-                        $err_msg = "*Tag non inseriti correttamente";
+                        $error_msg = "*Le Password non Corrispondono";
                         break;
                 default:
-                        $error_msg = "*Errore durante il caricamento";
+                        $error_msg = "*Errore durante l'accesso";
                         break;
                 }
         }
@@ -24,57 +21,84 @@
 <html>
         <head>
                 <meta encoding="utf-8"/>
-                <title>Creazione Post</title>
+                <title>Modifica dati utente</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
-                <link rel="stylesheet" type="text/css" href="addPhoto.css"/>
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link rel="stylesheet" type="text/css" href="modificadati.css"/>
+                <link rel="stylesheet" type="text/css" href="style.css"/>
+                <link rel="stylesheet" type="text/css" href="login.css"/>
                 <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap" rel="stylesheet">
         </head>
         <body>
                 <div>
-                    <div id="post" class="panel">       <!-- Div centrale della pagina -->
-                            <form id="postform" action="post-manager.php" method="POST" enctype="multipart/form-data">  <!-- Form d'inserimento dei dati -->
+                        <div id="registration">
+                                <form id="registrazione" action="reg-manager.php" method="POST" enctype="multipart/form-data">   <!-- Div centrale della pagina -->
+                                        
+                                        <div id="welcome">
+                                                <p1>Modifica la tua immagine profilo</p1>
 
-                                    <h1>Condividi il tuo meme</h1>  
+                                                <div id="dropzone">     <!-- Sezione per il Dropzone -->
+                                                        <div id="preview-container">    <!-- Container che serve per la visualizzazione dell'anteprima dell'immagine -->
+                                                                
+                                                                <svg width="43" height="35" viewBox="0 0 32 32">
+                                                                        <image width="32" height="32" href="images/dragAndDropIcon.svg" style="opacity: 0.5;"/> <!-- Icona Standard -->
+                                                                </svg>
+                                                                <p>Trascina qui la tua foto profilo!</p>
 
-                                    <div id="input">
-                                        <p2>Aggiungi una foto</p2>
-                                        <p2>*Descrizione</p2>
-
-                                        <div id="dropzone">     <!-- Sezione per il Dropzone -->
-                                                <div id="preview-container">    <!-- Container che serve per la visualizzazione dell'anteprima dell'immagine -->
-                                                        <svg width="43" height="35" viewBox="0 0 32 32">
-                                                                <image width="32" height="32" href="images/dragAndDropIcon.svg" style="opacity: 0.5;"/> <!-- Icona Standard -->
-                                                        </svg>
+                                                        </div>
+                                                        <input id="fileInput" type="file" name="pfp" style="display: none;" accept="image/*"></input>   <!-- Input per permettere di cliccare per aggiungere la foto--> 
+                                                        
                                                 </div>
 
-                                                <input id="fileInput" type="file" style="display: none;" name="image_post" accept="image/*"></input>    <!-- Input per permettere di cliccare per aggiungere la foto-->
                                         </div>
 
-                                        <textarea id="description" name="description" ></textarea>      <!-- Text Area Descrizione -->
+                                        <div id="regform">      <!-- Form d'inserimento dei dati -->
 
-                                        <p3>*Aggiungi dei tag (separati da virgola)</p3>
-                                        <textarea id="tag" name="tag"></textarea>       <!-- Text Area Tag-->
+                                                <h1>Modifica qui i tuoi dati</h1>
 
-                                        <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>"> <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
-                                                <?php echo $error_msg; ?>
-                                        </p>
-                                    </div>
-                                    
-                                    <button id="caricapost">Carica Post</button>        <!-- Pulsante d'invio del form -->
-                            </form>
-                    </div>
+                                                <p>*Username: </p>
+                                                <label for="username">  <!-- Area Username -->
+                                                        <input type="text" name="username" placeholder="vecchio username"></input>    
+                                                </label>
+                
+                                                <p>*Password: </p>
+                                                <label for="password">  <!-- Area Password -->
+                                                        <input type="password" name="password" placeholder="vecchia password"></input>
+                                                </label>
+
+                                                <p>*Conferma Password: </p>
+                                                <label for="password">  <!-- Area Conferma Password -->
+                                                        <input type="password" name="repassword"></input>
+                                                </label>
+
+                                                
+
+                                                <input type="submit" name="Accedi" value="Modifica"/>      <!-- Pulsante d'invio del form -->
+
+                                                
+                                                
+                                                
+                                                <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
+                                                        <?php echo $error_msg; ?>
+                                                </p>
+                                        </div>
+                                        
+                                </form>
+                                <form id="logoutform" action="endSession.php">
+                                        <input type="submit" id="logout" value="Logout"/>
+                                </form>
+                        </div>
+                        
+
+                        <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
+                        
                 </div>
+                
+                
 
-                        <!--    Inizio della sezione di script per funzionamento della pagina      -->
+
+                <!--    Inizio della sezione di script per funzionamento della pagina      -->
 
                 <script>
-
-                                //      Inizio sezione per la gestione del D&D
-                                
-                                
                         const droparea = document.getElementById("dropzone");   // Prendo i riferimenti per la sezione dropzone e il fileInput
                         const fileInput = document.getElementById("fileInput");
 
@@ -87,7 +111,7 @@
                         });
                        
 
-                        droparea.addEventListener("drop", dropHandler); // Listner per la funzione del Drop 
+                        droparea.addEventListener("drop", dropHandler); // Listner per la funzione del Drop
 
                         window.addEventListener("drop", (e) => {        // Listner alla finestra che impedisce di aprire l'immagine trascinata in un'altra scheda
                                 e.preventDefault();
@@ -119,27 +143,7 @@
                                 }
                         });
 
-                        document.getElementById('tag').addEventListener('blur', function(e) {   // Listner che si assicura che il formato dei tag venga rispettato (#'nome_tag1', #'nome_tag2'...)
-                                                                                                // Le modifiche vengono apportate nel momento l'utente esce dall'area di testo
-
-                                let value = e.target.value;     // Prelevo il testo
-
-                                if (value.length > 0) { // Verifico che il testo non sia nullo
-
-                                        let tags = value.split(',').map(tag => { // Listner che divide i tag in base alla ,
-
-                                        tag = tag.trim();       // Elimino spazi superflui prima e dopo i tag
-
-                                        if (tag.length > 0 && !tag.startsWith('#')) {   // Inserisco # dove necessario
-                                                return '#' + tag;
-                                        }
-                                        return tag;
-                                        });
-
-                                        e.target.value = tags.join(', ');    // Reinserisco la , fra i vari tag   
-                                }
-                        });
-
+                        
                         //      Sezione dello script necessaria per la visualizzazione dell'immagine nel D&D e dichiarazioni di funzioni chiamate in precedenza
 
                         const previewContainer = document.getElementById("preview-container");  // Prendo il riferimento al div per la preview dell'immagine
@@ -156,13 +160,14 @@
 
                                         img.classList.add("preview-image");     // Aggiungo l'immagine al previewContainer
                                         previewContainer.appendChild(img);
+
                                 }
                                 
                         }
 
                         function dropHandler(ev) {      // Funzione che gestisce l'evento del rilascio
 
-                                ev.preventDefault();    // Prevengo il comportamento di default del browser
+                                ev.preventDefault();    // Funzione che gestisce l'evento del rilascio
 
                                 const files = ev.dataTransfer.files;    // Salvo il file rilasciato
 
@@ -172,8 +177,8 @@
                                 }
                         }
 
-                </script>
 
-                <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
+
+                </script>
         </body>
 </html>

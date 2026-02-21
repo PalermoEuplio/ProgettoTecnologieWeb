@@ -4,28 +4,32 @@ html{
 
 body{
         background-color: #f38e77;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
 }
 
 body>div {
-        position: fixed;
         width: 100%;
-        height: 100%;
+        height: 40em;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
 }
-
 
 #post {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
         width: 50rem;
-        height: 35rem;
+        height: 100%;
         border-style: solid black 2px;
         background:#f8c8bd;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.3);
         padding: 1em 0;
         border-radius: 2em;
 }
@@ -38,16 +42,35 @@ body>div {
         height: 90%;
 }
 
+#postform>h1{
+        font-family: "Jersey 10", sans-serif;
+        font-size: 50;
+}
+
+#input>p2{
+        font-family: "Jersey 15", sans-serif;
+        font-size: 27;
+        margin-bottom:0.5em;
+}
+
+#input>p3{
+        font-family: "Jersey 15", sans-serif;
+        font-size: 25;
+}
+
 #postform>button {
-        margin-top: 2em;
+        margin-top: 1em;
         width: 80%;
         cursor: pointer;
-        height: 5em;
+        height: 3em;
         background-color: rgb(140, 245, 111);;
         border-radius: 10px;
         border-style: 2px solid;
         border-color: rgb(91, 88, 88);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-family: "Press Start 2P", system-ui;
+        font-size: 15;
+        letter-spacing: 0.2em;
 }
 #postform>button:hover{
         background-color: rgba(110, 243, 73, 0.688) ;
@@ -113,6 +136,7 @@ body>div {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     resize: none;
     font-size: 20;
+    font-family: "Funnel Display", sans-serif;
 }
 #input>#tag{
         margin-left: 1em;
@@ -124,11 +148,7 @@ body>div {
         border-radius: 15px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         resize: none;
-        font-size: 15;
+        font-size: 18;
+        font-family: "Funnel Display", sans-serif;
 }
 
-
-body>footer{
-        position: fixed;
-        bottom: 0;
-}

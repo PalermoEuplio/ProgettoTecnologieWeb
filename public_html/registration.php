@@ -21,9 +21,12 @@
 <html>
         <head>
                 <meta encoding="utf-8"/>
-                <title>Login</title>
+                <title>Registrazione</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <link rel="stylesheet" type="text/css" href="registration.css"/>
+                <link rel="stylesheet" type="text/css" href="style.css"/>
+                <link rel="stylesheet" type="text/css" href="login.css"/>
+                <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
         </head>
         <body>
                 <div>
@@ -49,29 +52,30 @@
 
                                 <div id="regform">      <!-- Form d'inserimento dei dati -->
 
-                                        <h1>Inserisci Dati</h1>
+                                        <h1>Inserisci i dati</h1>
 
-                                        <p>Username: </p>
+                                        <p>*Username: </p>
                                         <label for="username">  <!-- Area Username -->
                                                 <input type="text" name="username" required></input>    
                                         </label>
 
-                                        <p>Password: </p>
+                                        <p>*Password: </p>
                                         <label for="password">  <!-- Area Password -->
                                                 <input type="password" name="password" required></input>
                                         </label>
 
-                                        <p>Conferma Password: </p>
+                                        <p>*Conferma Password: </p>
                                         <label for="password">  <!-- Area Conferma Password -->
                                                 <input type="password" name="repassword" required></input>
                                         </label>
 
-                                        <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
-                                                <?php echo $error_msg; ?>
-                                        </p>
+                                        
 
                                         <input type="submit" name="Accedi" value="Registrati"/>      <!-- Pulsante d'invio del form -->
 
+                                        <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
+                                                <?php echo $error_msg; ?>
+                                        </p>
                                 </div>
 
                         </form>

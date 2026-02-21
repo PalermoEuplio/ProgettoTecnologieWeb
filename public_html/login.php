@@ -24,6 +24,10 @@
                 <title>Login</title>
                 <link rel="stylesheet" type="text/css" href="style.css"/>
                 <link rel="stylesheet" type="text/css" href="login.css"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jersey+10&family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap" rel="stylesheet">
         </head>
         <body>
                 <div>
@@ -52,18 +56,17 @@
                                                 <label for="password">
                                                         <input type="password" name="password" id="password" required></input>  <!-- Campo password -->
                                                 </label>
-
+                                                
                                                 <input type="submit" name="Accedi" value="Login"/>      <!-- Bottone d'accesso -->
-
-                                                <p id="errmsg" style="color: red; margin-top:2em; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
-                                                        <?php echo $error_msg; ?>
-                                                </p>
 
                                         </form>
 
                                         <form action="registration.php">        <!-- Form necessario al reinvio alla pagina di registrazione-->
                                                         <input type="submit" name="Registrati" value="Registrati"/>
                                         </form>
+                                        <p id="errmsg" style="color: red; margin-top:1em; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
+                                                        <?php echo $error_msg; ?>
+                                        </p>
 
                                 </div>
                         </div>

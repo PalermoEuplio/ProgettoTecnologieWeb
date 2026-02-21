@@ -14,7 +14,7 @@ header {
         position: fixed;
         width: 100%;
         font-size: 10;
-        height: 5em;
+        height: 7em;
         border-bottom-style: solid;
         box-shadow: rgba(0, 0, 0, 0.338) 0px 4px 40px -1px, rgba(0, 0, 0, 0.06) 0px 2px 40px -1px;
         background-color: #280905;
@@ -41,9 +41,18 @@ aside {
 
 #bg{
         width: 170px;
-        height: 30px;
+        height: 35px;
         cursor: pointer;
         margin-bottom: 10px;
+        margin-right: 7em;
+        border-radius: 5px;
+        font-family: "Press Start 2P", system-ui; 
+        font-size: 20;
+        background-color: rgba(130, 255, 88, 0.843);
+}
+
+#bg:hover{
+        background-color: rgb(130, 255, 88);
 }
 
 #searchbar {
@@ -57,8 +66,9 @@ aside {
         width: 200%;
         box-shadow: black 0px 3px 10px -2px;
         text-decoration: wavy;
-        font-size: 15;
+        font-size: 22;
         border-radius: 15px;
+        font-family: "Jersey 25", sans-serif;
 }
 
 #searchbar>#searchicon {
@@ -67,7 +77,7 @@ aside {
         border: 1px solid darkgray;
         position: absolute;
         right: 0.5em;
-        top: 2px;
+        top: 0.5em;
         padding: 0.1em;
         cursor: pointer;
 
@@ -75,10 +85,12 @@ aside {
 
 #logo {
         position: absolute;
-        left: 2rem;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        left: 5rem;
         color: #FCEBE8;
         font-style: oblique;
+        font-family: "Jersey 10";
+        font-size: 30;
+        letter-spacing: 2px;
 }
 
 
@@ -90,9 +102,9 @@ aside {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    top: 3.3rem;
-    height: 3rem;
-    width: 84.8%;
+    top: 4.5rem;
+    height: 4rem;
+    width: 84.9%;
     gap: 1rem;
     border-bottom: 1px solid black;
     background-color: #f38e77;
@@ -107,9 +119,10 @@ aside {
 }
 
 #userform{
-        padding-left: 0.6rem;
-        position:relative;
-        z-index: 1;
+        right: 5rem;
+        position:absolute;
+        z-index: 100;
+        bottom:0.6em
 }
 
 
@@ -122,21 +135,21 @@ aside {
         margin-right: 1rem;
 }
 
-#user>#userform>#userIcon {
+#userform>#userIcon {
         z-index: 1;
-        width: 37;
-        height: 37;
+        width: 50;
+        height: 50;
         border-radius: 50%;
-        border: 1px solid #2B5275;
+        border: 2px solid #828282;
         flex-shrink: 0;
         background-color: white;
         object-fit: cover;
 }
-#user>#userform>#userIcon:hover {
+#userform>#userIcon:hover {
         padding: 0;
         border-radius: 50%;
         flex-shrink: 0;
-        box-shadow: #3C3F42 0px 0px 20px -1px;
+        box-shadow: #5683b0 0px 0px 10px 2px;
         cursor: pointer;
 }
 
@@ -145,6 +158,7 @@ aside {
         display: none;
         position: absolute;
         top:30px;
+        right:-20px;
         background-color: white; 
 
         padding: 10px;
@@ -159,30 +173,39 @@ aside {
 
 
 #user>#fastmsgform>#fastmsg{
-        width: 70%;
-        height: 35;
+        width: 90%;
+        height: 45;
         border-radius: 15px;
         border: 2px solid black;
         text-align: center;
-        padding-top: 9px;
-        margin-left: 15%;
+        margin-left: 1em;
         margin-right: 2em;
         background-color: #91979d81;
         box-shadow: black 0px 3px 10px -2px;
-        resize: none;        
+        resize: none;
+        font-family: "Press Start 2P", system-ui; 
+        font-size: 18;   
+        padding-top: 0.8em; 
 }
 
-#user>#fastmsgform>#sendMessege , #user>#photoform>#addPhoto {
-        width: 35;
-        height: 35;
-        border-radius: 30%;
+#user>#sendMessege , #user>#photoform>#addPhoto {
+        box-sizing: border-box;
+        width: 10em;
+        height: 2.2em;
         background-color:rgba(0, 0, 0, 0.175);
-        border: 1px solid #2B5275;
-        flex-shrink: 0;
+        border: 2px solid #3c1010;
+        border-radius: 5px;
+        margin-right: 3em;
+        font-size: 22px;
+        font-family:"Jersey 25";
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 }
-#user>#fastmsgform>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
-        border: 1px solid black;
-        box-shadow: #3C3F42 0px 0px 20px -1px;
+
+#user>#sendMessege:hover , #user>#photoform>#addPhoto:hover {
+        box-shadow: #271313 5px 3px 3px 3px;
         flex-shrink: 0;
         cursor: pointer;
 }
@@ -210,6 +233,7 @@ aside {
         justify-content: left;
         background-color: #f8c8bd;
         top: 3.3em;
+        margin-top: 1em;
 }
 
 .main.loggato{
@@ -246,7 +270,9 @@ aside {
 
 .autore>p {
         margin-left: 0.4rem;
-        font-size: 18px;
+        font-size: 20px;
+        font-family: "Press Start 2P", system-ui;
+        font-style:oblique;
 }
 
 .post /*spazio dove andrà la foto */ {
@@ -278,6 +304,7 @@ aside {
 .description>p {
         text-wrap: wrap;
         margin-top: 0.5rem;
+        font-family: "Funnel Display", sans-serif;
 }
 
 .comment {
@@ -294,6 +321,8 @@ aside {
 
         border: 2px solid #ddd;
         border-radius: 10px;
+        font-family: "Funnel Display", sans-serif;
+        
 }
 
 .comment>ul {
@@ -323,6 +352,8 @@ aside {
         margin-right: auto;
         width: 100%;
         height: 5em;
+        font-family: "Funnel Display", sans-serif;
+        font-size: 16;
 }
 
 .sendLike {

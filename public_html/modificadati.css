@@ -20,12 +20,12 @@ body>div {
 
 #registration {
         display: flex;
+        flex-direction: column;
+        align-content: center;
         justify-content: center;
-        padding: 0.2em;
         width: 45rem;
-        height: 30rem;
+        height: 35rem;
         border-style: solid;
-        padding: 1em 0;
         z-index: 2;
         background-color: #f8c8bd;
         box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.3);
@@ -33,7 +33,7 @@ body>div {
 
 #registrazione{
         display: grid;
-        grid-template-columns: repeat(2,42%);
+        grid-template-columns: repeat(2,49%);
 
 }
 
@@ -44,20 +44,17 @@ body>div {
         height: 100%;           
         text-align: left;
 }
-#welcome>h1{
+#welcome>p1{
         text-align: center;
         font-family: "Jersey 10", sans-serif;
-        font-size: 65;
-}
-#welcome>p{
-        font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
-        font-size: 23;
+        font-size:50;
+        margin-top: 1em;
 }
 
 #regform{
         justify-content: center;
         align-self: center;
+        margin-top: 2em;
 }
 
 #regform>h1{
@@ -86,6 +83,7 @@ body>div {
         font-size: 20;
         border-radius: 20px;
         border: 1.5px solid #888;
+        font-family: "Funnel Display", sans-serif;
 }
 #regform>input[type="submit"] {
         border-radius: 0px;
@@ -96,10 +94,12 @@ body>div {
         width: 65%;
         margin-left:55px;
 }
+
 #regform>input[type="submit"]:hover{
         background-color: #FFE8B8;
         cursor: pointer;
 }
+
 
 #dropzone {
         width: 90%;
@@ -133,4 +133,23 @@ body>div {
     align-self: flex-end;
     z-index: 2;
 
+}
+
+#logoutform{
+        display: flex;
+        justify-content: center;
+}
+
+#logout{
+        background-color: rgb(235, 86, 86);
+        border-bottom: 1em;
+        width: 30%;
+        border: 2px solid black;
+        border-radius: 20px;
+
+
+}
+#logout:hover{
+        background-color: rgba(235, 86, 86, 0.496);
+        cursor: pointer;
 }
