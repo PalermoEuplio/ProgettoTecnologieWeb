@@ -35,20 +35,22 @@
                 $pfp = get_img($user,$db);      // Salvo il riferimento alla pfp richiamando la funzione get_img
 
         ?>
+        <?php
+                if(isset($_SESSION['username']))  {      // Controllo necessario alla visualizzazione della barra sopra ai post relativa all'utente
+                        ?>
+                        <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">     <!-- Sezione legata all'immagine dell'utente e che compare al passare del mouse su di essa -->
 
-        <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">     <!-- Sezione legata all'immagine dell'utente e che compare al passare del mouse su di essa -->
+                        <img id="userIcon" src="<?= htmlspecialchars($pfp) ?>"/>        <!-- Immagine utente -->
 
-                <img id="userIcon" src="<?= htmlspecialchars($pfp) ?>"/>        <!-- Immagine utente -->
-
-                <div id="userinfo">     <!-- Div contentente alcune funzioni accessibili dall'utente, come il logout -->
+                        <div id="userinfo">     <!-- Div contentente alcune funzioni accessibili dall'utente, come il logout -->
 
                         <form action="endSession.php">  <!-- Richiamo il file per chiudere la sessione se l'utente clicca sul logout -->
                                 <button style="cursor: pointer;">Logout</button>
                         </form>
 
-                </div>
+                        </div>
 
-                <script>
+                        <script>
                         // Script necessario all'apparizione e alla scomparsa della sezione userform
 
                         function comparsa(x) {
@@ -61,6 +63,11 @@
 
                 </script>
         </div>
+        <?php
+                }
+        ?>
+
+        
 
         <?php 
 
