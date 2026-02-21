@@ -53,18 +53,17 @@
                                                 <label for="password">
                                                         <input type="password" name="password" id="password" required></input>  <!-- Campo password -->
                                                 </label>
-
+                                                
                                                 <input type="submit" name="Accedi" value="Login"/>      <!-- Bottone d'accesso -->
-
-                                                <p id="errmsg" style="color: red; margin-top:2em; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
-                                                        <?php echo $error_msg; ?>
-                                                </p>
 
                                         </form>
 
                                         <form action="registration.php">        <!-- Form necessario al reinvio alla pagina di registrazione-->
                                                         <input type="submit" name="Registrati" value="Registrati"/>
                                         </form>
+                                        <p id="errmsg" style="color: red; margin-top:1em; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
+                                                        <?php echo $error_msg; ?>
+                                        </p>
 
                                 </div>
                         </div>

@@ -127,10 +127,10 @@ aside {
 
 #userform>#userIcon {
         z-index: 1;
-        width: 37;
-        height: 37;
+        width: 50;
+        height: 50;
         border-radius: 50%;
-        border: 1px solid #2B5275;
+        border: 1px solid #325f86;
         flex-shrink: 0;
         background-color: white;
         object-fit: cover;
@@ -139,7 +139,7 @@ aside {
         padding: 0;
         border-radius: 50%;
         flex-shrink: 0;
-        box-shadow: #3C3F42 0px 0px 20px -1px;
+        box-shadow: #5683b0 0px 0px 10px 2px;
         cursor: pointer;
 }
 

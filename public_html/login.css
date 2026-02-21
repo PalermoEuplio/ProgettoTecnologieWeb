@@ -10,7 +10,7 @@ head,body{
         padding: 0.2em;
         position: static;
         width: 45rem;
-        height: 26rem;
+        height: 28rem;
         border-style: solid;
         padding: 1em 0;
         margin-top: 2rem;
@@ -55,6 +55,13 @@ head,body{
         margin-bottom: 0.1em;
         font-family: "Jersey 25", sans-serif;
         font-size: larger;
+}
+
+#errmsg{
+        font-family: "Jersey 25", sans-serif;
+        font-size: larger;  
+        margin-bottom: 1em;
+        text-align: center;
 }
 
 #loginform>label>input, input[type="submit"] {

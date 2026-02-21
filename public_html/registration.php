@@ -69,12 +69,13 @@
                                                 <input type="password" name="repassword" required></input>
                                         </label>
 
-                                        <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
-                                                <?php echo $error_msg; ?>
-                                        </p>
+                                        
 
                                         <input type="submit" name="Accedi" value="Registrati"/>      <!-- Pulsante d'invio del form -->
 
+                                        <p id="errmsg" style="color: red; <?php echo empty($error_msg) ? 'display:none;' : ''; ?>">     <!-- Messaggio d'errore che compare e cambia testo in base al valore di $error_msg passato nell'header -->
+                                                <?php echo $error_msg; ?>
+                                        </p>
                                 </div>
 
                         </form>
