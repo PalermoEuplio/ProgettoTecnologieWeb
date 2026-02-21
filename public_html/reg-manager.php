@@ -12,24 +12,35 @@
 
         if(isset($_FILES['pfp']) && $_FILES['pfp']['error']== UPLOAD_ERR_OK){   /* Verifico se l'utente ha inserito una sua immagine o meno; 
                                                                                     in caso positivo questa dovrà essere spostata nella directory dedicata*/
-            
-            $profilepicture = $_FILES['pfp'];
-            $target_dir = "profilepictures/";   //Seleziono la target directory
 
-            if (!is_dir($target_dir)) {     //Creo la cartella se non esiste
-                mkdir($target_dir, 0777, true);
-            }
+                // Verifico che il file sia davvero un immagine
 
-            $ext = pathinfo($profilepicture["name"], PATHINFO_EXTENSION);   // Unisco l'immagine e la target directory per formare quello che sarà il nome dell'immagine (Compreso d'estenzione) 
-            $filename = uniqid("pfp_", true) . "." . $ext;
-            $pfp_path = $target_dir . $filename;
+                $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif','bmp');
 
-            if (!move_uploaded_file($profilepicture["tmp_name"], $pfp_path)) {  // Sposto l'immagine e aggiorno la variabile con il relativo path
-                
-                $pfp_path = "images/anonymusUserIcon.svg"; // Fallback in caso di errore move
+                $ext = strtolower(substr(strrchr($_FILES['pfp']['name'], "."), 1));
 
-            }
-        } 
+                if(in_array($ext, $allowed_extensions)) {
+
+                        $profilepicture = $_FILES['pfp'];
+                        $target_dir = "profilepictures/";   //Seleziono la target directory
+
+                        if (!is_dir($target_dir)) {     //Creo la cartella se non esiste
+                            mkdir($target_dir, 0777, true);
+                        }
+
+                        $ext = pathinfo($profilepicture["name"], PATHINFO_EXTENSION);   // Unisco l'immagine e la target directory per formare quello che sarà il nome dell'immagine (Compreso d'estenzione) 
+                        $filename = uniqid("pfp_", true) . "." . $ext;
+                        $pfp_path = $target_dir . $filename;
+
+                        if (!move_uploaded_file($profilepicture["tmp_name"], $pfp_path)) {  // Sposto l'immagine e aggiorno la variabile con il relativo path
+                                $pfp_path = "images/anonymusUserIcon.svg"; // Fallback in caso di errore move
+
+                        }
+                }
+                else {
+                        $pfp_path = "images/anonymusUserIcon.svg"; // Fallback in caso di file non supportato
+                }
+        }
 
         if (!empty($pass)){ // Controllo l'inserimento della password
 
