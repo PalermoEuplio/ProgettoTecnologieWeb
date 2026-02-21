@@ -1,5 +1,7 @@
 <?php
 
+    include "validate_img.php";
+
     // File Php Contenente la logica applicativa legata alla registrazione
 
     session_start(); 
@@ -15,13 +17,7 @@
         if(isset($_FILES['pfp']) && $_FILES['pfp']['error']== UPLOAD_ERR_OK){   /* Verifico se l'utente ha inserito una sua immagine o meno; 
                                                                                     in caso positivo questa dovrà essere spostata nella directory dedicata*/
 
-                // Verifico che il file sia davvero un immagine
-
-                $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif','bmp');
-
-                $ext = strtolower(substr(strrchr($_FILES['pfp']['name'], "."), 1));
-
-                if(in_array($ext, $allowed_extensions)) {
+                if(is_file_img($_FILES['pfp'])) {
 
                         $profilepicture = $_FILES['pfp'];
                         $target_dir = "profilepictures/";   //Seleziono la target directory
@@ -40,6 +36,7 @@
                         }
                 }
                 else {
+                        unlink($_FILES['pfp']['tmp_name']);
                         $pfp_path = "images/anonymusUserIcon.svg"; // Fallback in caso di file non supportato
                 }
         }

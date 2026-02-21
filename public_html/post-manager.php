@@ -3,6 +3,7 @@
     // File Php Contenente la logica applicativa legata ai post
 
     include "db.php";   // Connessione al database
+    include "validate_img.php";
     
     //      Serie di controlli per capire quale opzione si vuole fare
 
@@ -155,17 +156,21 @@
 
         if(isset($_FILES['image_post'])){   // Se vi è l'immagine devo sopstarla nella cartella dedicata alle immagini dei post e devo aggiornarne il riferimento
 
-            $post_image = $_FILES['image_post'];    // Prelevo l'immagine
-            $target_dir = "postimages/";    // Prelevo la target directory
 
-            $ext = pathinfo($post_image["name"], PATHINFO_EXTENSION);   // Unisco l'immagine e la target directory per formare quello che sarà il nome dell'immagine (Compreso d'estenzione)
-            $filename = uniqid("post_", true) . "." . $ext;
-            $target_file = $target_dir . $filename;
+            if(is_file_img($_FILES['image_post'])) {
+                $post_image = $_FILES['image_post'];    // Prelevo l'immagine
+                $target_dir = "postimages/";    // Prelevo la target directory
 
-            if (move_uploaded_file($post_image["tmp_name"], $target_file)) {    // Sposto l'immagine e aggiorno la variabile con il relativo path
-                $post_path = $target_file;
+                $ext = pathinfo($post_image["name"], PATHINFO_EXTENSION);   // Unisco l'immagine e la target directory per formare quello che sarà il nome dell'immagine (Compreso d'estenzione)
+                $filename = uniqid("post_", true) . "." . $ext;
+                $target_file = $target_dir . $filename;
+
+                if (move_uploaded_file($post_image["tmp_name"], $target_file)) {    // Sposto l'immagine e aggiorno la variabile con il relativo path
+                    $post_path = $target_file;
+                }
+            } else {
+                unlink($_FILES['image_post']['tmp_name']);
             }
-
         }
 
 
