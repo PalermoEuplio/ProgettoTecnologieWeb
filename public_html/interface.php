@@ -38,31 +38,13 @@
         <?php
                 if(isset($_SESSION['username']))  {      // Controllo necessario alla visualizzazione della barra sopra ai post relativa all'utente
                         ?>
-                        <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">     <!-- Sezione legata all'immagine dell'utente e che compare al passare del mouse su di essa -->
-
-                        <img id="userIcon" src="<?= htmlspecialchars($pfp) ?>"/>        <!-- Immagine utente -->
-
-                        <div id="userinfo">     <!-- Div contentente alcune funzioni accessibili dall'utente, come il logout -->
-
-                        <form action="endSession.php">  <!-- Richiamo il file per chiudere la sessione se l'utente clicca sul logout -->
-                                <button style="cursor: pointer;">Logout</button>
-                        </form>
-
-                        </div>
-
-                        <script>
-                        // Script necessario all'apparizione e alla scomparsa della sezione userform
-
-                        function comparsa(x) {
-                                document.getElementById(x).style.display = "block";     // Cambio di valore dell'attributo display in block
-                        }
-
-                        function scomparsa(x) { 
-                                document.getElementById(x).style.display = "none";      // Cambio di valore dell'attributo display in none
-                        }
-
-                </script>
-        </div>
+                        <form action="modificadati.php">
+                                <button>
+                                        <div id="userform" onmouseover="comparsa('userinfo');" onmouseout="scomparsa('userinfo');">     <!-- Sezione legata all'immagine dell'utente e che compare al passare del mouse su di essa -->
+                                                <img id="userIcon" src="<?= htmlspecialchars($pfp) ?>"/>        <!-- Immagine utente -->
+                                        </div>
+                                </button>
+                        </form> 
         <?php
                 }
         ?>
