@@ -5,7 +5,13 @@
                 const textElement = document.getElementById('fastmsg'); // Prendo il riferimento all'area di testo ed elimino eventuali spazi superflui
                 const message = textElement.value.trim();
 
-                if (message === "") return; // Termino l'esecuzione se il testo è vuoto
+                if (message === "") { // Errore se il messaggio è vuoto
+                        let oldstyle = textElement.style;
+                        textElement.style.border = "2px solid red"; // Cambia lo stile della barra di testo
+
+                        setTimeout(() => {textElement.style = oldstyle}, 500); // Dopo un po' torna come prima
+                        return;
+                }
 
                 const formData = new FormData();        // Preparo il messaggio per inviare la descrizione del post con id f_description
                 formData.append('f_description', message);
