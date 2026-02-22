@@ -137,7 +137,17 @@
                                 endif;
                         ?>
 
-                        
+                        <div class="tags">
+                        <?php
+                                $tags = json_decode($row['tag_json']);
+                                foreach($tags as $raw_tag) {
+                                        $tag = htmlspecialchars($raw_tag);
+                                        $tag_url = "index.php?search=" . trim($tag, "#+-/ \t\r\n");
+
+                                        echo "<a href=\"$tag_url\">$tag</a>";
+                                }
+                        ?>
+                        </div>
                 </div>
 
                 
