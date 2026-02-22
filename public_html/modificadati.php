@@ -58,12 +58,12 @@
 
                                                 <p>*Username: </p>
                                                 <label for="username">  <!-- Area Username -->
-                                                        <input type="text" name="username" placeholder="Vecchio Username" required></input>    
+                                                        <input type="text" name="username" placeholder="Nuovo username" required></input>    
                                                 </label>
                 
                                                 <p>*Password: </p>
                                                 <label for="password">  <!-- Area Password -->
-                                                        <input type="password" name="password" placeholder="vecchia password" required></input>
+                                                        <input type="password" name="password" placeholder="Nuova password" required></input>
                                                 </label>
 
                                                 <p>*Conferma Password: </p>

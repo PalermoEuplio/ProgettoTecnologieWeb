@@ -30,9 +30,6 @@
                                 <?php include 'posts.php'; ?>
                         </div>
 
-                        <aside>
-                                <!-- Inizio della sezione di lato della pagina -->
-                        </aside>
 
                         <?php include 'footer.php'; ?>  <!-- Inclusione del footer -->
                 </div>

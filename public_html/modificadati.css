@@ -69,21 +69,14 @@ body>div {
         font-size: larger;
 }
 
-#regform>label>input[type="text"] {
+#regform>label>input[type="text"], #regform>label>input[type="password"] {
         height: 2.2em;
         width: 100%;
         font-size: 20;
         border-radius: 20px;
         border: 1.5px solid #888;
         font-family: "Funnel Display", sans-serif;
-}
-#regform>label>input[type="password"] {
-        height: 2.2em;
-        width: 100%;
-        font-size: 20;
-        border-radius: 20px;
-        border: 1.5px solid #888;
-        font-family: "Funnel Display", sans-serif;
+        padding: 0.4em;
 }
 #regform>input[type="submit"] {
         border-radius: 0px;
